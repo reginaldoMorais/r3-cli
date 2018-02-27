@@ -1,0 +1,30 @@
+/**
+ * Common
+ */
+
+ .form-control-inline {
+  span, select.form-control {
+    display: inline-block;
+  }
+
+  select.form-control {
+    width: auto;
+    margin-left: 10px;
+  }
+}
+
+.float-btn {
+  margin-top: 18px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+.formMessage {
+  padding: 5px;
+  display: inline-block;
+}
+
+input.form-control.form-control {
+  border-radius: 0;
+}

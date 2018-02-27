@@ -1,0 +1,21 @@
+files:
+  include: 'src/styles/**/*.scss'
+  ignore: 'src/styles/_mixins.scss'
+rules:
+  no-important: 0
+  property-sort-order: 0
+  no-color-literals: 0
+  no-css-comments: 0
+  clean-import-paths: 0
+  class-name-format: 0
+  nesting-depth: 0
+  no-duplicate-properties: 0
+  empty-line-between-blocks:
+    - 1
+    - ignore-single-line-rulesets: true
+  no-misspelled-properties:
+    - 1
+    - extra-properties: overflow-scrolling
+  no-vendor-prefixes:
+    - 0
+

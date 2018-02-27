@@ -6,6 +6,8 @@ const fs = require('fs');
 const fsx = require('fs-extra')
 const touch = require('touch');
 const _ = require('lodash');
+const CLI = require('clui');
+const Spinner = CLI.Spinner;
 
 // Libs
 const inquirer = require('./lib/inquirer');
@@ -16,7 +18,7 @@ const route = require('./lib/route');
 
 const hasProject = () => {
   if (!files.fileExists(`.rip-cli`)) {
-    console.log(chalk.red('Não foi encontrado Projeto válido!'));
+    console.log(chalk.red('\nNão foi encontrado Projeto válido!'));
     process.exit();
   }
 }
@@ -26,10 +28,13 @@ const test = () => {
   console.log(`Current directory: ${rootDir}`);
 }
 
+/**
+ * Cria a estrutura de rota e view, caso ele já não existão.
+*/
 const createRoute = async () => {
   try {
     hasProject();
-    
+
     const answers = await inquirer.askRouteName();
     const routeName = answers.routeName;
 
@@ -53,6 +58,9 @@ const createRoute = async () => {
   }
 }
 
+/**
+ * Cria a estrutura de view, caso ele já não exista.
+*/
 const createView = async () => {
   try {
     hasProject();
@@ -77,7 +85,7 @@ const createView = async () => {
   }
 }
 
-/** 
+/**
  * Cria a estrutura do projeto, caso ele já não exista.
 */
 const createProject = async () => {
@@ -92,21 +100,38 @@ const createProject = async () => {
 
     console.log(chalk.blue('\u25A0 Criando Projeto, por favor aguarde...'));
 
-    await project.createProjectFolder(projectName);
-    await project.copySettings(projectName);
-    await project.copyConfig(projectName);
-    await project.copyViews(projectName);
+    const status = new Spinner(`Processando arquivos do novo projeto, por favor aguarde...`);
+    status.start();
+
+    try {
+      await project.createProjectFolder(projectName);
+      await project.copySettings(projectName);
+      await project.copyConfig(projectName);
+      await project.copyServer(projectName);
+      await project.copyPublic(projectName);
+      await project.copyClient(projectName);
+      await project.copySource(projectName);
+      await project.setProjectName(projectName);
+    } catch (err) {
+      throw err;
+    } finally {
+      setTimeout(() => {
+        status.stop();
+      }, 500);
+    }
   } catch (err) {
     if (err) {
       switch (err.code) {
-        default:
+        default: {
           console.error(err);
+          project.deleteProject(projectName);
+        }
       }
     }
   }
 }
 
-/** 
+/**
  * Responsável pela exibição do menu, caso não seja passado nenhum parametro.
 */
 const showMenu = async () => {
@@ -118,17 +143,17 @@ const showMenu = async () => {
         createProject();
         break;
       }
-      
+
       case 'Criar Rota': {
         createRoute();
         break;
-      }  
-      
+      }
+
       case 'Criar View': {
         createView();
         break;
       }
-  
+
       default: {
         createProject();
         break;
@@ -145,7 +170,7 @@ const showMenu = async () => {
   }
 }
 
-/** 
+/**
  * Função principal de execução.
 */
 const run = () => {
@@ -163,12 +188,12 @@ const run = () => {
       createProject();
       break;
     }
-    
+
     case 'route': {
       createRoute();
       break;
     }
-    
+
     case 'view': {
       createView();
       break;

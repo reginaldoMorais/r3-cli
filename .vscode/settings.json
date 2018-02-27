@@ -1,0 +1,45 @@
+{
+  /* EDITOR */
+  "editor.fontSize": 13,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.renderIndentGuides": true,
+  "editor.renderControlCharacters": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnType": true,
+  "editor.tabCompletion": true,
+  "editor.mouseWheelZoom": true,
+  "editor.trimAutoWhitespace": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": true,
+  "editor.minimap.showSlider": "always",
+  "editor.dragAndDrop": true,
+  "editor.autoIndent": true,
+  "explorer.sortOrder": "type",
+
+  /* FILES */
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+
+  /* CUSTOM LAYOUT */
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.projectDetection.autoReload": true,
+  "vsicons.associations.files": [
+    { "icon": "reactjs", "extensions": ["jsx"], "format": "svg", "overrides": "js" },
+    { "icon": "js", "extensions": ["js"], "format": "svg", "overrides": "js" }
+  ],
+
+  /* TODO SETTINGS */
+  "todohighlight.isEnable": true,
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "search.exclude": {},
+}

@@ -2,13 +2,13 @@ const _ = require('lodash');
 const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs');
-const fsx = require('fs-extra')
+const fsx = require('fs-extra');
 const touch = require('touch');
 const CLI = require('clui');
 const Spinner = CLI.Spinner;
 
 module.exports = {
-  createRoute: (name) => {
+  createRoute: name => {
     const status = new Spinner('Implementando nova rota, por favor aguarde...');
     status.start();
 
@@ -19,7 +19,7 @@ module.exports = {
     } finally {
       setTimeout(() => {
         status.stop();
-      }, 1000);
+      }, 500);
     }
   },
 };

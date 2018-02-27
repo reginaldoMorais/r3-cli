@@ -1,0 +1,46 @@
+/**
+ * Header
+ */
+
+ // UserInfo
+@import "user-info";
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  padding: 20px;
+
+  .navbar-brand {
+    font-family: 'RussoOne-Regular';
+    font-size: 22px;
+    color: #000;
+  }
+
+  .navbar-nav {
+    font-size: 16px;
+    margin-right: 20px;
+
+    & > li > a {
+      margin: 5px;
+
+      &:hover {
+        color: #05d2af !important;
+      }
+    }
+  }
+
+  .right-menu {
+    margin-left: auto !important;
+    & > * {
+      display: -webkit-inline-box;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .navbar-nav {
+      display: none;
+    }
+  }
+}

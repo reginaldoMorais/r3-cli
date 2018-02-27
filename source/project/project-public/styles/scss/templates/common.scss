@@ -1,0 +1,95 @@
+/**
+ * Common
+ */
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    font-family: 'Roboto-Regular';
+    font-size: 10px !important;
+
+    .right {
+      float: right;
+    }
+
+    h4 {
+      font-family: 'Dosis-Regular';
+    }
+
+    #wrapper {
+      height: 100%;
+      background: #DDD;
+    }
+
+    .alert {
+      box-shadow: 0 .5rem 1.7rem -.8rem;
+      text-align: left;
+      display: flex;
+
+      & > i {
+        margin-right: .5rem;
+        font-size: 1rem;
+      }
+
+      span {
+        font-size: .8rem;
+      }
+    }
+
+    .content {
+      padding-top: 20px;
+    }
+
+    .header + .content {
+      padding-top: 0;
+    }
+
+    table {
+      .btn {
+        font-size: 1rem;
+
+        & + .btn {
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .gray-bg {
+      background-color: #f3f3f4;
+      background-color: #DDD;
+      height: 100%;
+    }
+
+    .anthracite-bg {
+      background-color: #454748;
+      height: 100%;
+    }
+
+    .middle-box {
+      max-width: 400px;
+      z-index: 100;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+
+    .page-in {
+      padding: 0 0 100px;
+      background: #DDD;
+      margin-top: 50px;
+
+      @media (max-width: 768px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .badge {
+    font-size: 0.8rem;
+  }
+}
+
+.redux-toastr .toastr .rrt-middle-container .rrt-title {
+  font-size: 14px !important;
+}

@@ -1,0 +1,7 @@
+# DIR
+node_modules/
+dist/
+zip/
+
+# FILE
+*.log

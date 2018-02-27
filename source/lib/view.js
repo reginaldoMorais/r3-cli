@@ -1,14 +1,11 @@
-const _ = require('lodash');
 const chalk = require('chalk');
-const path = require('path');
 const fs = require('fs');
-const fsx = require('fs-extra')
 const touch = require('touch');
 const CLI = require('clui');
 const Spinner = CLI.Spinner;
 
 module.exports = {
-  createView: (name) => {
+  createView: name => {
     const status = new Spinner('Criando extrutura da View, por favor aguarde...');
     status.start();
 
@@ -23,7 +20,7 @@ module.exports = {
     }
   },
 
-  createController: (name) => {
+  createController: name => {
     fs.mkdirSync(`./views/component/${name}`);
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
@@ -52,7 +49,7 @@ module.exports = {
     module.exports.createContainer(name);
   },
 
-  createContainer: (name) => {
+  createContainer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./views/component/${name}/${component}Container.jsx`;
@@ -73,11 +70,11 @@ module.exports = {
     fs.writeFileSync(file, content);
 
     console.log(chalk.green('  \u2713 Success create Container'));
-    
+
     module.exports.createAction(name);
   },
 
-  createAction: (name) => {
+  createAction: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./views/component/${name}/${component}Actions.js`;
@@ -95,7 +92,7 @@ module.exports = {
     module.exports.createReducer(name);
   },
 
-  createReducer: (name) => {
+  createReducer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./views/component/${name}/${component}Reducer.js`;

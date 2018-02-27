@@ -7,9 +7,9 @@ module.exports = {
         type: 'list',
         name: 'option',
         message: 'O que deseja fazer:',
-        choices: [ 'Criar novo projeto', 'Criar Rota', 'Criar View' ],
-        default: 'Criar novo projeto'
-      }
+        choices: ['Criar novo projeto', 'Criar Rota', 'Criar View'],
+        default: 'Criar novo projeto',
+      },
     ];
     return inquirer.prompt(questions);
   },
@@ -19,14 +19,14 @@ module.exports = {
         name: 'projectName',
         type: 'input',
         message: 'Informe um nome para o Projeto:',
-        validate: function (value) {
+        validate: value => {
           if (value.length) {
             return true;
           } else {
             return 'Por favor, entre com um nome para o Projeto.';
           }
-        }
-      }
+        },
+      },
     ];
     return inquirer.prompt(questions);
   },
@@ -36,14 +36,14 @@ module.exports = {
         name: 'routeName',
         type: 'input',
         message: 'Informe a rota.\n  Os caracteres devem ser minúsculos:',
-        validate: function (value) {
+        validate: value => {
           if (value.length) {
             return true;
           } else {
             return 'Por favor, entre com uma rota válida.';
           }
-        }
-      }
+        },
+      },
     ];
     return inquirer.prompt(questions);
   },
@@ -53,14 +53,14 @@ module.exports = {
         name: 'viewName',
         type: 'input',
         message: 'Informe o nome da View.\n  Os caracteres devem ser minúsculos:',
-        validate: function (value) {
+        validate: value => {
           if (value.length) {
             return true;
           } else {
             return 'Por favor, entre com um nome válido.';
           }
-        }
-      }
+        },
+      },
     ];
     return inquirer.prompt(questions);
   },
