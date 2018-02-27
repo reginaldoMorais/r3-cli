@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const figlet = require('figlet');
 const chalk = require('chalk');
 const clear = require('clear');
@@ -10,12 +12,28 @@ const CLI = require('clui');
 const Spinner = CLI.Spinner;
 
 // Libs
-const inquirer = require('./lib/inquirer');
-const files = require('./lib/files');
-const project = require('./lib/project');
-const view = require('./lib/view');
-const route = require('./lib/route');
+const inquirer = require('./source/lib/inquirer');
+const files = require('./source/lib/files');
+const project = require('./source/lib/project');
+const view = require('./source/lib/view');
+const route = require('./source/lib/route');
 
+const showAppHeader = () => {
+  console.log(
+    chalk.yellow(
+      figlet.textSync('RIP CLI', { horizontalLayout: 'full' })
+    )
+  );
+  console.log(
+    chalk.yellowBright(
+      ' =======    React + Redux Generator    =======\n\n'
+    )
+  );
+}
+
+/**
+ * Verifica se o comando está rodando num projeto válido.
+*/
 const hasProject = () => {
   if (!files.fileExists(`.rip-cli`)) {
     console.log(chalk.red('\nNão foi encontrado Projeto válido!'));
@@ -132,6 +150,28 @@ const createProject = async () => {
 }
 
 /**
+ * Exibe as opções via command line.
+*/
+const showCommands = async () => {
+  try {
+    console.log(chalk.blue('Usage: rip-cli [arguments]'));
+    console.log(chalk.cyan('   rip-cli --help\n'));
+    console.log(chalk.blue('Options:'));
+    console.log(chalk.cyan('  -h, --help                 print Application\'s commands'));
+    console.log(chalk.cyan('  -c, --create               create a new project'));
+    console.log(chalk.cyan('  -r, --route                create a new route and view'));
+    console.log(chalk.cyan('  -v, --view                 create a new view\n'));
+  } catch (err) {
+    if (err) {
+      switch (err.code) {
+        default:
+          console.error(err);
+      }
+    }
+  }
+}
+
+/**
  * Responsável pela exibição do menu, caso não seja passado nenhum parametro.
 */
 const showMenu = async () => {
@@ -151,6 +191,11 @@ const showMenu = async () => {
 
       case 'Criar View': {
         createView();
+        break;
+      }
+
+      case 'Exibir comandos': {
+        showCommands();
         break;
       }
 
@@ -175,34 +220,25 @@ const showMenu = async () => {
 */
 const run = () => {
   clear();
-  console.log(
-    chalk.yellow(
-      figlet.textSync('REACT REDUX CLI', { horizontalLayout: 'full' })
-    )
-  );
+  showAppHeader();
 
-  const [, , ...args] = process.argv;
+  const [, , ...args] = process.argv || [];
 
-  switch (args[0]) {
-    case 'create': {
+  if (args.length > 0) {
+    if (args[0] == '--help' || args[0] == '-h') {
+      showCommands();
+    } else if (args[0] == '--create' || args[0] == '-c') {
       createProject();
-      break;
-    }
-
-    case 'route': {
+    } else if (args[0] == '--route' || args[0] == '-r') {
       createRoute();
-      break;
-    }
-
-    case 'view': {
+    } else if (args[0] == '--view' || args[0] == '-v') {
       createView();
-      break;
+    } else {
+      console.log(chalk.red(`Command '${args[0]}' not found!\n`));
+      showCommands();
     }
-
-    default: {
-      showMenu();
-      break;
-    }
+  } else {
+    showMenu();
   }
 }
 

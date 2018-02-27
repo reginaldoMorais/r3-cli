@@ -1,12 +1,12 @@
 {
   "name": "rip-cli",
   "version": "1.0.0",
-  "main": "./source",
+  "main": "./index.js",
   "repository": "https://github.com/reginaldoMorais/rip-cli.git",
   "author": "reginaldoMorais <reginaldo.cmorais@gmail.com>",
   "license": "MIT",
   "bin": {
-    "rip-cli": "./source"
+    "rip-cli": "./index.js"
   },
   "dependencies": {
     "@octokit/rest": "^14.0.9",
