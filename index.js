@@ -19,14 +19,15 @@ const view = require('./source/lib/view');
 const route = require('./source/lib/route');
 
 const showAppHeader = () => {
+  console.log(' ');
   console.log(
     chalk.yellow(
-      figlet.textSync('RIP CLI', { horizontalLayout: 'full' })
+      figlet.textSync('R3 CLI', { horizontalLayout: 'full' })
     )
   );
   console.log(
     chalk.yellowBright(
-      ' =======    React + Redux Generator    =======\n\n'
+      ' =  React + Redux + Router Generator  =\n\n'
     )
   );
 }

@@ -1,12 +1,12 @@
 {
-  "name": "rip-cli",
+  "name": "r3-cli",
   "version": "1.0.0",
   "main": "./index.js",
-  "repository": "https://github.com/reginaldoMorais/rip-cli.git",
+  "repository": "https://github.com/reginaldoMorais/r3-cli.git",
   "author": "reginaldoMorais <reginaldo.cmorais@gmail.com>",
   "license": "MIT",
   "bin": {
-    "rip-cli": "./index.js"
+    "r3-cli": "./index.js"
   },
   "dependencies": {
     "@octokit/rest": "^14.0.9",

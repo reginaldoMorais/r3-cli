@@ -17,6 +17,7 @@ module.exports = {
 
   setProjectName: projectName => {
     const files = [
+      `${process.cwd()}/${projectName}/client/index.html`,
       `${process.cwd()}/${projectName}/server/index.js`,
       `${process.cwd()}/${projectName}/server/server.js`,
       `${process.cwd()}/${projectName}/package.json`,
