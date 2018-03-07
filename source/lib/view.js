@@ -21,10 +21,10 @@ module.exports = {
   },
 
   createController: name => {
-    fs.mkdirSync(`./views/component/${name}`);
+    fs.mkdirSync(`./source/views/view/${name}`);
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./views/component/${name}/${component}.jsx`;
+    const file = `./source/views/view/${name}/${component}.jsx`;
     const content = `
     import React, { Component } from 'react';
 
@@ -52,7 +52,7 @@ module.exports = {
   createContainer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./views/component/${name}/${component}Container.jsx`;
+    const file = `./source/views/view/${name}/${component}Container.jsx`;
     const content = `
     import React from 'react';
     import { bindActionCreators } from 'redux';
@@ -77,7 +77,7 @@ module.exports = {
   createAction: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./views/component/${name}/${component}Actions.js`;
+    const file = `./source/views/view/${name}/${component}Actions.js`;
     const content = `
     export const action = () => {
       return { type: '${name.toUpperCase()}_ACTION' }
@@ -95,7 +95,7 @@ module.exports = {
   createReducer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./views/component/${name}/${component}Reducer.js`;
+    const file = `./source/views/view/${name}/${component}Reducer.js`;
     const content = `
     const INITIAL_STATE = {};
 
