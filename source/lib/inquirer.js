@@ -4,8 +4,8 @@ module.exports = {
   askMenuOption: () => {
     const questions = [
       {
-        type: 'list',
         name: 'option',
+        type: 'list',
         message: 'O que deseja fazer:',
         choices: ['Criar novo projeto', 'Criar Rota', 'Criar View'],
         default: 'Criar novo projeto',
@@ -43,6 +43,18 @@ module.exports = {
             return 'Por favor, entre com uma rota válida.';
           }
         },
+      },
+    ];
+    return inquirer.prompt(questions);
+  },
+  askRouteType: () => {
+    const questions = [
+      {
+        name: 'option',
+        type: 'list',
+        message: 'Informe qual tipo de rota:',
+        choices: ['externa', 'interna'],
+        default: 'externa',
       },
     ];
     return inquirer.prompt(questions);

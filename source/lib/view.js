@@ -1,8 +1,15 @@
 const chalk = require('chalk');
 const fs = require('fs');
+const fsx = require('fs-extra');
 const touch = require('touch');
 const CLI = require('clui');
 const Spinner = CLI.Spinner;
+
+// Libs
+const reducerFile = require('./files/reducer');
+const actionFile = require('./files/action');
+const componentFile = require('./files/component');
+const containerFile = require('./files/container');
 
 module.exports = {
   createView: name => {
@@ -14,9 +21,7 @@ module.exports = {
     } catch (err) {
       throw err;
     } finally {
-      setTimeout(() => {
-        status.stop();
-      }, 1000);
+      status.stop();
     }
   },
 
@@ -25,26 +30,12 @@ module.exports = {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./source/views/view/${name}/${component}.jsx`;
-    const content = `
-    import React, { Component } from 'react';
-
-    class ${component} extends Component {
-      render() {
-        return (
-          <div>
-            Conteúdo
-          </div>
-        );
-      }
-    }
-
-    export default ${component};
-    `;
+    const content = componentFile(component);
 
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.log(chalk.green('  \u2713 Success create Component'));
+    console.info(chalk.green('  \u2713 Success create Component'));
 
     module.exports.createContainer(name);
   },
@@ -53,23 +44,12 @@ module.exports = {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./source/views/view/${name}/${component}Container.jsx`;
-    const content = `
-    import React from 'react';
-    import { bindActionCreators } from 'redux';
-    import { connect } from 'react-redux';
-
-    import { action } from './${component}Actions';
-    import ${component} from './${component}';
-
-    const mapStateToProps = state => ({});
-    const mapDispatchToProps = dispatch => bindActionCreators({ action }, dispatch);
-    export default connect(mapStateToProps, mapDispatchToProps)(${component});
-    `;
+    const content = containerFile(component);
 
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.log(chalk.green('  \u2713 Success create Container'));
+    console.info(chalk.green('  \u2713 Success create Container'));
 
     module.exports.createAction(name);
   },
@@ -78,16 +58,12 @@ module.exports = {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./source/views/view/${name}/${component}Actions.js`;
-    const content = `
-    export const action = () => {
-      return { type: '${name.toUpperCase()}_ACTION' }
-    };
-    `;
+    const content = actionFile(name);
 
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.log(chalk.green('  \u2713 Success create Action'));
+    console.info(chalk.green('  \u2713 Success create Action'));
 
     module.exports.createReducer(name);
   },
@@ -96,25 +72,47 @@ module.exports = {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./source/views/view/${name}/${component}Reducer.js`;
-    const content = `
-    const INITIAL_STATE = {};
-
-    export default (state = INITIAL_STATE, action) => {
-      switch (action.type) {
-        case '${name.toUpperCase()}_ACTION': {
-          return state;
-        }
-
-        default: {
-          return state;
-        }
-      }
-    };
-    `;
+    const content = reducerFile(name);
 
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.log(chalk.green('  \u2713 Success create Reducer'));
+    module.exports.setReducerFile(name);
+
+    console.info(chalk.green('  \u2713 Success create Reducer'));
+  },
+
+  setReducerFile: name => {
+    const reducer = name.charAt(0).toUpperCase() + name.slice(1) + 'Reducer';
+
+    try {
+      const importStr = `/* Reducers */\nimport ${reducer} from './${name}/${reducer}';`;
+      const reducerStr = `const rootReducer = combineReducers({\n  ${name}: ${reducer},`;
+
+      module.exports.setReducerImport(importStr);
+      module.exports.setReducer(reducerStr);
+    } catch (err) {
+      console.error(chalk.red(`\nErro ao criar o Reducer ${name.toUpperCase()}!`));
+      console.error(err);
+      module.exports.deleteView(name);
+    }
+  },
+
+  setReducerImport: importStr => {
+    let data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
+    let result = data.replace(/\/\* Reducers \*\//g, importStr);
+    fs.writeFileSync(`./source/Reducers.js`, result, 'utf-8');
+  },
+
+  setReducer: reducerStr => {
+    let data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
+    let result = data.replace(/const rootReducer = combineReducers\(\{/g, reducerStr);
+    fs.writeFileSync(`./source/Reducers.js`, result, 'utf-8');
+  },
+
+  deleteView: name => {
+    fsx.removeSync(`./source/views/view/${name}`);
+    console.error(chalk.red(`\n  \u2715 View ${name.toUpperCase()} removidas!`));
+    process.exit();
   },
 };

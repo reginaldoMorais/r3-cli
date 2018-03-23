@@ -49,7 +49,7 @@ class Menu extends Component {
   }
 
   render() {
-    console.log('menu ', this.props.menu);
+    // console.info('menu ', this.props.menu);
     return (
       <ReduxBurgerMenu isOpen={this.props.isOpen} pageWrapId={'page-in'} outerContainerId={'in'} right>
         <UserInfo />

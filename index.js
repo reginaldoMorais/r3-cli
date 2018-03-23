@@ -19,13 +19,13 @@ const view = require('./source/lib/view');
 const route = require('./source/lib/route');
 
 const showAppHeader = () => {
-  console.log(' ');
-  console.log(
+  console.info(' ');
+  console.info(
     chalk.yellow(
       figlet.textSync('R3 CLI', { horizontalLayout: 'full' })
     )
   );
-  console.log(
+  console.info(
     chalk.yellowBright(
       ' =  React + Redux + Router Generator  =\n\n'
     )
@@ -36,15 +36,15 @@ const showAppHeader = () => {
  * Verifica se o comando está rodando num projeto válido.
 */
 const hasProject = () => {
-  if (!files.fileExists(`.rip-cli`)) {
-    console.log(chalk.red('\nNão foi encontrado Projeto válido!'));
+  if (!files.fileExists(`.r3-cli`)) {
+    console.error(chalk.red('\n  Não foi encontrado Projeto válido!\n'));
     process.exit();
   }
 }
 
 const test = () => {
   const rootDir = _.last(process.cwd().split('/'));
-  console.log(`Current directory: ${rootDir}`);
+  console.info(`Current directory: ${rootDir}`);
 }
 
 /**
@@ -57,16 +57,18 @@ const createRoute = async () => {
     const answers = await inquirer.askRouteName();
     const routeName = answers.routeName;
 
-    if (files.directoryExists(`./views/component/${routeName}`)) {
-      console.log(chalk.red('Esta Rota já existe!'));
+    if (files.directoryExists(`./source/views/view/${routeName}`)) {
+      console.error(chalk.red('\n  Esta Rota já existe!\n'));
       process.exit();
     }
 
     console.info(chalk.blue('\u25A0 Criando nova View, por favor aguarde...'));
     await view.createView(routeName);
 
+    const choise = await inquirer.askRouteType();
+
     console.info(chalk.blue('\u25A0 Criando nova Rota, por favor aguarde...'));
-    await route.createRoute(routeName);
+    await route.createRoute(routeName, choise);
   } catch (err) {
     if (err) {
       switch (err.code) {
@@ -87,12 +89,12 @@ const createView = async () => {
     const answers = await inquirer.askViewName();
     const viewName = answers.viewName;
 
-    if (files.directoryExists(`./views/component/${viewName}`)) {
-      console.log(chalk.red('Esta View já existe!'));
+    if (files.directoryExists(`./source/views/view/${viewName}`)) {
+      console.error(chalk.red('\n  Esta View já existe!\n'));
       process.exit();
     }
 
-    console.log(chalk.blue('\u25A0 Criando nova View, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Criando nova View, por favor aguarde...'));
     await view.createView(viewName);
   } catch (err) {
     if (err) {
@@ -113,11 +115,11 @@ const createProject = async () => {
     const projectName = answers.projectName;
 
     if (files.directoryExists(projectName)) {
-      console.log(chalk.red('Já existe um projeto com este nome!'));
+      console.error(chalk.red('\n  Já existe um projeto com este nome!\n'));
       process.exit();
     }
 
-    console.log(chalk.blue('\u25A0 Criando Projeto, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Criando Projeto, por favor aguarde...'));
 
     const status = new Spinner(`Processando arquivos do novo projeto, por favor aguarde...`);
     status.start();
@@ -155,13 +157,13 @@ const createProject = async () => {
 */
 const showCommands = async () => {
   try {
-    console.log(chalk.blue('Usage: rip-cli [arguments]'));
-    console.log(chalk.cyan('   rip-cli --help\n'));
-    console.log(chalk.blue('Options:'));
-    console.log(chalk.cyan('  -h, --help                 print Application\'s commands'));
-    console.log(chalk.cyan('  -c, --create               create a new project'));
-    console.log(chalk.cyan('  -r, --route                create a new route and view'));
-    console.log(chalk.cyan('  -v, --view                 create a new view\n'));
+    console.info(chalk.blue('Usage: r3-cli [arguments]'));
+    console.info(chalk.cyan('   r3-cli --help\n'));
+    console.info(chalk.blue('Options:'));
+    console.info(chalk.cyan('  -h, --help                 print Application\'s commands'));
+    console.info(chalk.cyan('  -c, --create               create a new project'));
+    console.info(chalk.cyan('  -r, --route                create a new route and view'));
+    console.info(chalk.cyan('  -v, --view                 create a new view\n'));
   } catch (err) {
     if (err) {
       switch (err.code) {
@@ -235,7 +237,7 @@ const run = () => {
     } else if (args[0] == '--view' || args[0] == '-v') {
       createView();
     } else {
-      console.log(chalk.red(`Command '${args[0]}' not found!\n`));
+      console.error(chalk.error(`Command '${args[0]}' not found!\n`));
       showCommands();
     }
   } else {

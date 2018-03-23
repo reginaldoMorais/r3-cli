@@ -1,8 +1,6 @@
 const chalk = require('chalk');
 const fs = require('fs');
 const fsx = require('fs-extra');
-const CLI = require('clui');
-const Spinner = CLI.Spinner;
 
 module.exports = {
   createProjectFolder: projectName => {
@@ -11,7 +9,7 @@ module.exports = {
 
   deleteProject: projectName => {
     fsx.removeSync(projectName);
-    console.log(chalk.red(`\nNão foi possível criar o Projeto ${projectName.toUpperCase()}!`));
+    console.error(chalk.red(`\n  \u2715 Não foi possível criar o Projeto ${projectName.toUpperCase()}!`));
     process.exit();
   },
 
@@ -23,6 +21,7 @@ module.exports = {
       `${process.cwd()}/${projectName}/package.json`,
       `${process.cwd()}/${projectName}/commands-ls.js`,
       `${process.cwd()}/${projectName}/README.md`,
+      `${process.cwd()}/${projectName}/.r3-cli`,
     ];
 
     files.forEach(file => {
@@ -36,13 +35,13 @@ module.exports = {
       }
     });
 
-    console.log(chalk.green('  \u2713 Project Name inserido'));
+    console.info(chalk.green('  \u2713 Project Name inserido'));
   },
 
   copySettings: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-settings`, projectName);
-      console.log(chalk.green('  \u2713 Settings criado'));
+      console.info(chalk.green('  \u2713 Settings criado'));
     } catch (err) {
       console.error(err);
     }
@@ -51,7 +50,7 @@ module.exports = {
   copyConfig: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-config`, `${projectName}/config`);
-      console.log(chalk.green('  \u2713 Config criado'));
+      console.info(chalk.green('  \u2713 Config criado'));
     } catch (err) {
       console.error(err);
     }
@@ -60,7 +59,7 @@ module.exports = {
   copyServer: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-server`, `${projectName}/server`);
-      console.log(chalk.green('  \u2713 Server criado'));
+      console.info(chalk.green('  \u2713 Server criado'));
     } catch (err) {
       console.error(err);
     }
@@ -69,7 +68,7 @@ module.exports = {
   copyPublic: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-public`, `${projectName}/public`);
-      console.log(chalk.green('  \u2713 Public criado'));
+      console.info(chalk.green('  \u2713 Public criado'));
     } catch (err) {
       console.error(err);
     }
@@ -78,7 +77,7 @@ module.exports = {
   copyClient: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-client`, `${projectName}/client`);
-      console.log(chalk.green('  \u2713 Client criado'));
+      console.info(chalk.green('  \u2713 Client criado'));
     } catch (err) {
       console.error(err);
     }
@@ -87,7 +86,7 @@ module.exports = {
   copySource: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-source`, `${projectName}/source`);
-      console.log(chalk.green('  \u2713 Source criado'));
+      console.info(chalk.green('  \u2713 Source criado'));
     } catch (err) {
       console.error(err);
     }

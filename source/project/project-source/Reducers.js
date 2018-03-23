@@ -3,7 +3,7 @@ import { reducer as formReducer } from 'redux-form';
 import { reducer as toastrReducer } from 'react-redux-toastr';
 import { reducer as burgerMenu } from 'redux-burger-menu';
 
-/** Reducers */
+/* Reducers */
 import MenuReducer from 'Templates/menu/MenuReducer';
 import CommonReducer from './CommonReducer';
 
