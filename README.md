@@ -1,10 +1,10 @@
 # R3-CLI
 
-Create React apps with Redux and Router v4.
+Create React applications with Redux and Router v4, very fast.
 
 ## Installation
 
-Run the command below, to have the module globaly:
+Run the command below, to have the module installed globally:
 
 ```bash
 npm install -g r3-cli
@@ -12,7 +12,13 @@ npm install -g r3-cli
 
 ## Usage
 
-To create a new app, run a single command:
+To see commands avaliable, run a single command with argument:
+
+```bash
+r3-cli --help
+```
+
+To create a new Project, run the command:
 
 ```bash
 r3-cli
@@ -24,15 +30,9 @@ or
 r3-cli -c my-app
 ```
 
-To see commands avaliable, run a single command with argument:
-
-```bash
-r3-cli --help
-```
-
 It will create a directory called `my-app` inside the current folder.
 
-Inside that directory, it will generate the initial project structure:
+You will found the initial Project structure:
 
 ```note
 my-app
@@ -65,21 +65,15 @@ my-app
     └── Store.js
 ```
 
-Once the installation is done, you can open your project folder:
+## Running your new Project
 
-```bash
-cd my-app
-```
-
-## Running your new App
-
-Inside the newly created project, you need to set a node version:
+Inside the newly created Project, you need to set a Node version:
 
 ### Requisite
 
 **NVM**
 
-To easily switch Node versions for your App, You can use [NVM](https://github.com/creationix/nvm) command:
+To easily switch Node versions for your Project, You can use [NVM](https://github.com/creationix/nvm) command:
 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
@@ -102,27 +96,28 @@ or
 yarn start
 ```
 
-Your app is ready to be accessed. Your can run the command **npm ls** or **yarn ls** to view available commands.
+Your Project is ready to be accessed. Your can run the command **npm ls** or **yarn ls** to view available commands.
 
 ## Creating a new Route
 
-To create a new route on your App run the command bellow:
+To create a new route on your Project run the command bellow:
 
 ```bash
 r3-cli --route
 ```
 
-A new view will automatically be created.
+A new route and view will automatically be created.
 
 ## Creating a new View
 
-To create a new view on your App run the command bellow:
+To create a new view on your Project run the command bellow:
 
 ```bash
 r3-cli --view
 ```
 
-It will create the files:
+A new view will automatically be created.
+It will be created the files:
 
 ```note
 NewView.jsx
@@ -130,3 +125,8 @@ NewViewAction.js
 NewViewContainer.jsx
 NewViewReducer.jsx
 ```
+
+
+
+## So, enjoy the plugin and Thank you for use it!
+[Reginaldo Morais](mailto:reginaldo.cmorais@gmail.com)
