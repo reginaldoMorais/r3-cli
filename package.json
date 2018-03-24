@@ -5,6 +5,12 @@
   "repository": "https://github.com/reginaldoMorais/r3-cli.git",
   "author": "reginaldoMorais <reginaldo.cmorais@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "redux",
+    "react-router",
+    "code-generator"
+  ],
   "bin": {
     "r3-cli": "./index.js"
   },
