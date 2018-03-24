@@ -29,8 +29,8 @@ describe('<${nameUpperCase}Container />', () => {
     const container = wrapper.find(${nameUpperCase}Container);
     const component = container.find(${nameUpperCase}Component);
 
-    expect(component.text()).toBe('Hello World');
-    expect(component.find('div').text()).toEqual('Hello World');
+    expect(component.text()).toBe('${nameUpperCase} page');
+    expect(component.find('h1').text()).toEqual('${nameUpperCase} page');
   });
 });
 `;
