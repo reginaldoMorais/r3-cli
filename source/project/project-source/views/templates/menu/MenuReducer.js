@@ -8,7 +8,7 @@ const MENU_INITIAL_STATE = {
       submenu: [],
       active: true,
       show: true,
-    },
+    } /* r3-cli-menu-tag */,
   ],
 };
 
@@ -24,22 +24,6 @@ export default (state = MENU_INITIAL_STATE, action) => {
 
       newState.items.forEach(object => {
         if (object.id == pageId) {
-          object.active = true;
-        }
-      });
-
-      return newState;
-    }
-
-    case 'SET_DASHBOARD_ACTIVATED': {
-      let newState = { ...state };
-
-      newState.items.forEach(object => {
-        object.active = false;
-      });
-
-      newState.items.forEach(object => {
-        if (object.id == 'dashboard') {
           object.active = true;
         }
       });

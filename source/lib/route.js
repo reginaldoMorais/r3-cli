@@ -17,7 +17,7 @@ module.exports = {
       let file;
 
       const importStr = `/* Containers / Components */\nimport ${component} from './${name}/${container}';`;
-      const routeStr = `<Switch>\n            <Route exact key="${name}" path="/" component={${component}} />`;
+      const routeStr = `<Switch>\n            <Route exact key="${name}" path="/${name}" component={${component}} />`;
 
       if (choise.option == 'interna') {
         file = `./source/views/view/In.jsx`;
@@ -28,6 +28,7 @@ module.exports = {
       try {
         module.exports.setImport(file, importStr);
         module.exports.setRoute(file, routeStr);
+        module.exports.setMenu(name);
       } catch (err) {
         console.error(chalk.red(`\n  \u2715 Erro ao criar a Rota ${name.toUpperCase()}!`));
         console.error(err);
@@ -53,6 +54,24 @@ module.exports = {
   setRoute: (file, routeStr) => {
     let data = fs.readFileSync(file, 'utf-8');
     let result = data.replace(/<Switch>/g, routeStr);
+    fs.writeFileSync(file, result, 'utf-8');
+  },
+
+  setMenu: name => {
+    const file = `./source/views/templates/menu/MenuReducer.js`;
+
+    let data = fs.readFileSync(file, 'utf-8');
+    const content = `},\n    {
+      id: '${name}',
+      name: '${name.charAt(0).toUpperCase() + name.slice(1)}',
+      link: '/${name}',
+      icon: 'fa-circle',
+      submenu: [],
+      active: false,
+      show: true,
+    } /* r3-cli-menu-tag */,`;
+
+    let result = data.replace(/} \/\* r3-cli-menu-tag \*\/,/g, content);
     fs.writeFileSync(file, result, 'utf-8');
   },
 };
