@@ -17,18 +17,20 @@ module.exports = {
       let file;
 
       const importStr = `/* Containers / Components */\nimport ${component} from './${name}/${container}';`;
-      const routeStr = `<Switch>\n            <Route exact key="${name}" path="/${name}" component={${component}} />`;
+      let routeStr;
 
       if (choise.option == 'interna') {
         file = `./source/views/view/In.jsx`;
+        routeStr = `<Switch>\n            <Route exact key="${name}" path="/in/${name}" component={${component}} />`;
       } else {
         file = `./source/views/view/Out.jsx`;
+        routeStr = `<Switch>\n            <Route exact key="${name}" path="/${name}" component={${component}} />`;
       }
 
       try {
         module.exports.setImport(file, importStr);
         module.exports.setRoute(file, routeStr);
-        module.exports.setMenu(name);
+        module.exports.setMenu(name, choise);
       } catch (err) {
         console.error(chalk.red(`\n  \u2715 Erro ao criar a Rota ${name.toUpperCase()}!`));
         console.error(err);
@@ -57,14 +59,21 @@ module.exports = {
     fs.writeFileSync(file, result, 'utf-8');
   },
 
-  setMenu: name => {
+  setMenu: (name, choise) => {
     const file = `./source/views/templates/menu/MenuReducer.js`;
+    let link;
+
+    if (choise.option == 'interna') {
+      link = `/in/${name}`;
+    } else {
+      link = `/${name}`;
+    }
 
     let data = fs.readFileSync(file, 'utf-8');
     const content = `},\n    {
       id: '${name}',
       name: '${name.charAt(0).toUpperCase() + name.slice(1)}',
-      link: '/${name}',
+      link: '${link}',
       icon: 'fa-circle',
       submenu: [],
       active: false,

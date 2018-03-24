@@ -14,7 +14,7 @@ class PageNotFound extends Component {
           <Row>
             <Col md={12} className="text-center">
               <h1>404</h1>
-              <h3 class="font-bold">Page Not Found</h3>
+              <h3 className="font-bold">Page Not Found</h3>
             </Col>
           </Row>
         </Content>

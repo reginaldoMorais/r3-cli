@@ -49,10 +49,13 @@ class Menu extends Component {
   }
 
   render() {
+    const showUserInfo = this.props.showUserInfo != undefined ? this.props.showUserInfo : true;
     // console.info('menu ', this.props.menu);
     return (
-      <ReduxBurgerMenu isOpen={this.props.isOpen} pageWrapId={'page-in'} outerContainerId={'in'} right>
-        <UserInfo />
+      <ReduxBurgerMenu isOpen={this.props.isOpen} pageWrapId={'page-wrapper'} outerContainerId={'page'} right>
+        <If test={showUserInfo}>
+          <UserInfo />
+        </If>
 
         {this.renderMenu()}
 

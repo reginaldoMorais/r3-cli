@@ -6,7 +6,7 @@ class Footer extends Component {
       <div className="footer fixed">
         <div className="pull-right" />
         <div>
-          <strong>Copyright</strong> Reginaldo Morais
+          <strong>Copyright</strong> <a href="mailto:reginaldo.cmorais@gmail.com">Reginaldo Morais</a>
         </div>
       </div>
     );

@@ -15,7 +15,7 @@ class Controller extends Component {
   routeIn() {
     return (
       <Switch>
-        <Route key="home-in" path="*" component={In} />
+        <Route key="home-in" path="/in/*" component={In} />
       </Switch>
     );
   }
@@ -37,7 +37,8 @@ class Controller extends Component {
   }
 
   render() {
-    return this.routeOut();
+    const pathname = window.location.pathname.split('/')[1];
+    return pathname == 'in' ? this.routeIn() : this.routeOut();
   }
 }
 

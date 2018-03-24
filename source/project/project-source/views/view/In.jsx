@@ -16,14 +16,14 @@ import PageNotFound from './PageNotFound';
 class In extends Component {
   render() {
     return (
-      <div className="in">
+      <div className="page in">
         <Menu />
         <Header match={this.props.match} />
-        <Content fluid={true} className="page-in">
+        <Content fluid={true} className="page-in page-wrapper">
           <Switch>
-            <Route exact key="index" path="/" component={Index} />
-            <Route exact key="index-not-found" path="/*" component={PageNotFound} />
-            <Route exact key="index-component" path="*" component={Index} />
+            <Route exact key="index" path="/in" component={Index} />
+            <Route exact key="index-not-found" path="/in/*" component={PageNotFound} />
+            <Route exact key="index-component" path="/in" component={Index} />
           </Switch>
         </Content>
         <Footer />
