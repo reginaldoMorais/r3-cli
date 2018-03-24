@@ -5,7 +5,7 @@ class ${component} extends Component {
   render() {
     return (
       <div>
-        Conteúdo
+        Hello World
       </div>
     );
   }

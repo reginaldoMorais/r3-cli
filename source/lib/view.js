@@ -6,6 +6,7 @@ const CLI = require('clui');
 const Spinner = CLI.Spinner;
 
 // Libs
+const test = require('./test');
 const reducerFile = require('./files/reducer');
 const actionFile = require('./files/action');
 const componentFile = require('./files/component');
@@ -17,7 +18,8 @@ module.exports = {
     status.start();
 
     try {
-      module.exports.createController(name);
+      fs.mkdirSync(`./source/views/view/${name}`);
+      module.exports.createComponent(name);
     } catch (err) {
       throw err;
     } finally {
@@ -25,8 +27,9 @@ module.exports = {
     }
   },
 
-  createController: name => {
-    fs.mkdirSync(`./source/views/view/${name}`);
+  createComponent: name => {
+    test.createTest(name);
+
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
     const file = `./source/views/view/${name}/${component}.jsx`;
@@ -86,7 +89,7 @@ module.exports = {
     const reducer = name.charAt(0).toUpperCase() + name.slice(1) + 'Reducer';
 
     try {
-      const importStr = `/* Reducers */\nimport ${reducer} from './${name}/${reducer}';`;
+      const importStr = `/* Reducers */\nimport ${reducer} from './views/view/${name}/${reducer}';`;
       const reducerStr = `const rootReducer = combineReducers({\n  ${name}: ${reducer},`;
 
       module.exports.setReducerImport(importStr);

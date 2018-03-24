@@ -1,3 +1,3 @@
 export const action = () => {
-  return { type: 'INDEX__ACTION' };
+  return { type: 'INDEX_ACTION' };
 };

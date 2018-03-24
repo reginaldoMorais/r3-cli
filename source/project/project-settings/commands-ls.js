@@ -23,7 +23,7 @@ const commands =
   '    -> Roda aplicação local em modo Staging.\n' +
   '▶️ ' +
   colors.green('start:prod') +
-  '   -> Roda aplicação local em modo Production.\n' +
+  '   -> Roda aplicação local em modo Production.\n\n' +
   '▶️ ' +
   colors.green('build') +
   '        -> Atalho para rodarExecuta o build da aplicação em modo Staging.\n' +
@@ -34,10 +34,25 @@ const commands =
   colors.green('build:prod') +
   '   -> Executa o build da aplicação em modo Production.\n' +
   '▶️ ' +
-  colors.green('clean') +
-  '        -> Exclui a pasta de build do projeto.\n' +
-  '▶️ ' +
   colors.green('serve') +
-  '        -> Executa aplicação em modo Production.\n';
+  '        -> Executa aplicação em modo Production.\n\n' +
+  '▶️ ' +
+  colors.green('clean') +
+  '        -> Exclui a pasta de build do projeto.\n\n' +
+  '▶️ ' +
+  colors.green('test') +
+  '         -> Executa os testes da aplicação.\n' +
+  '▶️ ' +
+  colors.green('test:w') +
+  '       -> Executa os testes da aplicação com parametro --watchAll.\n' +
+  '▶️ ' +
+  colors.green('test:v') +
+  '       -> Executa os testes da aplicação com parametro --verbose.\n' +
+  '▶️ ' +
+  colors.green('test:d') +
+  '       -> Executa os testes em modo debug.\n' +
+  '▶️ ' +
+  colors.green('test:c') +
+  '       -> Gera a cobertura de testes da aplicação.\n';
 
 console.info(commands);
