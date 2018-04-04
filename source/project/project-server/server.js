@@ -1,14 +1,22 @@
-const path = require('path');
-const express = require('express');
-const history = require('connect-history-api-fallback');
+import express from 'express';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import configureStore from '../Store';
+import Routes from '../Routes';
+import template from './template';
 
 module.exports = {
   app: () => {
     const app = express();
-    const indexPath = path.join(__dirname, '../index.html');
-    const publicPath = express.static(path.join(__dirname, '../'));
+    const env = process.env.NODE_ENV || 'development';
+    const isServer = true;
+    const devTools = f => f;
 
     app.get('/health', (_, res) => res.send({ status: 'OK' }));
+
     app.get('/resource-status', (_, res) =>
       res.send({
         createdBy: 'Node Version 6.10.3',
@@ -18,9 +26,30 @@ module.exports = {
       })
     );
 
-    app.use(history());
-    app.use('/', publicPath);
-    app.get('/', (_, res) => res.sendFile(indexPath));
+    app.use('/assets', express.static('./dist'));
+
+    app.get('*', (req, res) => {
+      const store = configureStore({}, devTools, isServer);
+      const context = {};
+
+      const appWithRouter = (
+        <Provider store={store}>
+          <StaticRouter location={req.url} context={context}>
+            <Routes />
+          </StaticRouter>
+        </Provider>
+      );
+
+      if (context.url) {
+        res.redirect(context.url);
+        return;
+      }
+
+      const html = ReactDOMServer.renderToString(appWithRouter);
+      const initialState = store.getState();
+
+      res.status(200).send(template(html, initialState, env));
+    });
 
     return app;
   },

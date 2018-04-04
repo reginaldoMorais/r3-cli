@@ -28,7 +28,7 @@ module.exports = {
   createComponentTest: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/__test__/${component}.spec.jsx`;
+    const file = `./source/views/view/${name}/__test__/${component}.spec.js`;
     const content = componentTestFile(component);
 
     touch(file);
@@ -42,7 +42,7 @@ module.exports = {
   createContainerTest: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/__test__/${component}Container.spec.jsx`;
+    const file = `./source/views/view/${name}/__test__/${component}Container.spec.js`;
     const content = containerTestFile(component);
 
     touch(file);

@@ -1,0 +1,91 @@
+/**
+ * React Table
+ */
+
+.export {
+  .btn {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -13px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    float: right;
+
+    i + span {
+      margin-left: 1rem;
+      font-size: 1.2rem
+    }
+  }
+}
+
+.ReactTable {
+  border: 0 none;
+  padding: 0 10px;
+
+  .rt-thead {
+    &.-header {
+      box-shadow: 0 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .rt-th {
+      padding: 15px 10px;
+      font-weight: bold;
+      border: 0 none;
+    }
+
+    .rt-td {
+      padding: 10px;
+    }
+  }
+
+  .rt-tbody {
+    .rt-td {
+      padding: 10px;
+      border: 0 none;
+    }
+  }
+
+  .rt-td-center {
+    text-align: center;
+  }
+
+  .rt-td-options {
+    .btn {
+      font-size: 11px;
+
+      &.btn:first-child {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &.rt-thead-left {
+    .rt-thead {
+      .rt-th {
+        text-align: left;
+      }
+    }
+  }
+
+  .-pagination {
+    padding: 0;
+    border: 0;
+    box-shadow: initial;
+
+    width: 100%;
+    margin: 20px auto 0;
+    -webkit-box-pack: center;
+
+    .-center {
+      font-size: 1rem;
+    }
+
+    .-pageInfo {
+      margin: 0 10px;
+    }
+
+    & .-previous, & .-next {
+      -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+      flex: 0.2;
+      text-align: center;
+    }
+  }
+}

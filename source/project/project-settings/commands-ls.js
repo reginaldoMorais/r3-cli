@@ -13,6 +13,9 @@ const commands =
   colors.green('command') +
   ' \n\n' +
   '▶️ ' +
+  colors.green('analyse') +
+  '               -> Executa commando Webpack que analiza bundles da aplicação.\n\n' +
+  '▶️ ' +
   colors.green('start') +
   '                 -> Atalho para rodar aplicação local em modo Desenvolvimento.\n' +
   '▶️ ' +
@@ -23,37 +26,43 @@ const commands =
   '             -> Roda aplicação local em modo Staging.\n' +
   '▶️ ' +
   colors.green('start:prod') +
-  '            -> Roda aplicação local em modo Production.\n\n' +
+  '            -> Roda aplicação local em modo Produção. [CUIDADO AO EXECUTAR NESTA CONGIGURAÇÃO]\n\n' +
   '▶️ ' +
   colors.green('build') +
-  '                 -> Atalho para rodarExecuta o build da aplicação em modo Staging.\n' +
+  '                 -> Atalho para rodar o build da aplicação em modo Produção.\n' +
   '▶️ ' +
   colors.green('build:stg') +
-  '             -> Executa o build da aplicação em modo Staging.\n' +
+  '             -> Roda o build da aplicação em modo Staging.\n' +
   '▶️ ' +
   colors.green('build:prod') +
-  '            -> Executa o build da aplicação em modo Production.\n' +
+  '            -> Roda o build da aplicação em modo Produção.\n\n' +
   '▶️ ' +
   colors.green('serve') +
-  '                 -> Executa aplicação em modo Production.\n\n' +
+  '                 -> Atalho para rodar a aplicação em modo Produção.\n' +
+  '▶️ ' +
+  colors.green('serve:stg') +
+  '             -> Roda aplicação em modo Staging.\n' +
+  '▶️ ' +
+  colors.green('serve:prod') +
+  '            -> Roda aplicação em modo Produção.\n\n' +
   '▶️ ' +
   colors.green('clean') +
   '                 -> Exclui a pasta de build do projeto.\n\n' +
   '▶️ ' +
   colors.green('test') +
-  '                  -> Executa todos os testes da aplicação.\n' +
+  '                  -> Roda todos os testes da aplicação.\n' +
   '▶️ ' +
   colors.green('test [file.spec.js]') +
-  '   -> Executa os testes de um arquivo.\n' +
+  '   -> Roda os testes de um arquivo.\n' +
   '▶️ ' +
   colors.green('test:w') +
-  '                -> Executa os testes da aplicação com parametro --watchAll.\n' +
+  '                -> Roda os testes da aplicação com parametro --watchAll.\n' +
   '▶️ ' +
   colors.green('test:v') +
-  '                -> Executa os testes da aplicação com parametro --verbose.\n' +
+  '                -> Roda os testes da aplicação com parametro --verbose.\n' +
   '▶️ ' +
   colors.green('test:d') +
-  '                -> Executa os testes em modo debug.\n' +
+  '                -> Roda os testes em modo debug.\n' +
   '▶️ ' +
   colors.green('test:c') +
   '                -> Gera a cobertura de testes da aplicação.\n';

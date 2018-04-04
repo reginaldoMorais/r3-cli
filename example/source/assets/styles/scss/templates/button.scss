@@ -1,0 +1,16 @@
+/**
+ * Button
+ */
+
+.btn {
+  border-radius: 0px;
+  padding: 10px 30px;
+  border-color: transparent;
+  background-color: #4cbef3;
+
+  &:hover {
+    background-color: #209dd8;
+    border-color: transparent;
+    box-shadow: 0 4px 16px -3px rgba(0, 1, 31, 0.4);
+  }
+}

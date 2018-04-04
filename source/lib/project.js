@@ -15,9 +15,9 @@ module.exports = {
 
   setProjectName: projectName => {
     const files = [
-      `${process.cwd()}/${projectName}/client/index.html`,
-      `${process.cwd()}/${projectName}/server/index.js`,
-      `${process.cwd()}/${projectName}/server/server.js`,
+      `${process.cwd()}/${projectName}/source/client/index.html`,
+      `${process.cwd()}/${projectName}/source/server/index.js`,
+      `${process.cwd()}/${projectName}/source/server/server.js`,
       `${process.cwd()}/${projectName}/package.json`,
       `${process.cwd()}/${projectName}/commands-ls.js`,
       `${process.cwd()}/${projectName}/README.md`,
@@ -47,9 +47,27 @@ module.exports = {
     }
   },
 
+  copySource: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-source`, `${projectName}/source`);
+      console.info(chalk.green('  \u2713 Source criado'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
+  copyViews: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/views`);
+      console.info(chalk.green('  \u2713 Views criado'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
   copyConfig: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-config`, `${projectName}/config`);
+      fsx.copySync(`${__dirname}/../project/project-config`, `${projectName}/source/config`);
       console.info(chalk.green('  \u2713 Config criado'));
     } catch (err) {
       console.error(err);
@@ -58,7 +76,7 @@ module.exports = {
 
   copyServer: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-server`, `${projectName}/server`);
+      fsx.copySync(`${__dirname}/../project/project-server`, `${projectName}/source/server`);
       console.info(chalk.green('  \u2713 Server criado'));
     } catch (err) {
       console.error(err);
@@ -67,7 +85,7 @@ module.exports = {
 
   copyPublic: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-public`, `${projectName}/public`);
+      fsx.copySync(`${__dirname}/../project/project-public`, `${projectName}/source/assets`);
       console.info(chalk.green('  \u2713 Public criado'));
     } catch (err) {
       console.error(err);
@@ -76,17 +94,8 @@ module.exports = {
 
   copyClient: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-client`, `${projectName}/client`);
+      fsx.copySync(`${__dirname}/../project/project-client`, `${projectName}/source/client`);
       console.info(chalk.green('  \u2713 Client criado'));
-    } catch (err) {
-      console.error(err);
-    }
-  },
-
-  copySource: projectName => {
-    try {
-      fsx.copySync(`${__dirname}/../project/project-source`, `${projectName}/source`);
-      console.info(chalk.green('  \u2713 Source criado'));
     } catch (err) {
       console.error(err);
     }

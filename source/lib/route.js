@@ -20,10 +20,10 @@ module.exports = {
       let routeStr;
 
       if (choise.option == 'interna') {
-        file = `./source/views/view/In.jsx`;
+        file = `./source/views/view/In.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/in/${name}" component={${component}} />`;
       } else {
-        file = `./source/views/view/Out.jsx`;
+        file = `./source/views/view/Out.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/${name}" component={${component}} />`;
       }
 

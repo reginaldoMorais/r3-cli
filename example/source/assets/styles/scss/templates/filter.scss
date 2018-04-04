@@ -1,0 +1,81 @@
+/**
+ * Filters
+ */
+
+.filter-wrapper {
+  & > div {
+    padding: 1rem 3rem;
+  }
+
+  .filter-label {
+    display: inline-block;
+    margin: 0 .5rem 1rem;
+
+    span {
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .close {
+      display: inline-block;
+      margin: 2px 0 2px 5px;
+      cursor: pointer;
+      color: #FFF;
+      font-size: 1.4rem;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.filter-wrapper {
+  .filter-title {
+    width: 7rem;
+    display: inline-block;
+    position: relative;
+
+    i {
+      float: left;
+      font-size: 1.5rem;
+      margin: 0.2rem 1rem .2rem 0;
+      position: absolute;
+      left: -5px;
+      top: 3px;
+    }
+
+    span {
+      display: inline-block;
+      margin-top: .5rem;
+    }
+  }
+}
+
+.table-with-filter {
+  .rt-tbody span {
+    display: inline-block;
+    padding: 5px 10px;
+
+    &.filter-select {
+      font-size: 1.2rem;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 2px 7px -3px #000;
+        background: #1c84c6;
+        color: #FFF;
+        border-radius: 5px;
+
+        &:after {
+          content: '\f0b0';
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          margin:0px 0px 0px 10px;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+}

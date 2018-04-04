@@ -1,0 +1,27 @@
+/**
+ * Footer
+ */
+
+.footer {
+  background: none repeat scroll 0 0 white;
+  border-top: 1px solid #ccc;
+  bottom: 0;
+  left: 0;
+  padding: 20px 30px;
+  position: absolute;
+  right: 0;
+
+  font-size: 12px;
+  font-family: Arial;
+
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    background: white;
+    border-top: 1px solid #ccc;
+  }
+}

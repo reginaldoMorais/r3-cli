@@ -126,12 +126,13 @@ const createProject = async () => {
 
     try {
       await project.createProjectFolder(projectName);
+      await project.copySource(projectName);
+      await project.copyViews(projectName);
       await project.copySettings(projectName);
       await project.copyConfig(projectName);
       await project.copyServer(projectName);
       await project.copyPublic(projectName);
       await project.copyClient(projectName);
-      await project.copySource(projectName);
       await project.setProjectName(projectName);
     } catch (err) {
       throw err;

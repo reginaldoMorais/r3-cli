@@ -32,7 +32,7 @@ module.exports = {
 
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/${component}.jsx`;
+    const file = `./source/views/view/${name}/${component}.js`;
     const content = componentFile(component);
 
     touch(file);
@@ -46,7 +46,7 @@ module.exports = {
   createContainer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/${component}Container.jsx`;
+    const file = `./source/views/view/${name}/${component}Container.js`;
     const content = containerFile(component);
 
     touch(file);
