@@ -161,10 +161,29 @@ const showCommands = async () => {
     console.info(chalk.blue('Usage: r3-cli [arguments]'));
     console.info(chalk.cyan('   r3-cli --help\n'));
     console.info(chalk.blue('Options:'));
-    console.info(chalk.cyan('  -h, --help                 print Application\'s commands'));
+    console.info(chalk.cyan('  -h, --help                 print application\'s commands'));
+    console.info(chalk.cyan('  -v, --version              list r3-cli version'));
     console.info(chalk.cyan('  -c, --create               create a new project'));
     console.info(chalk.cyan('  -r, --route                create a new route and view'));
-    console.info(chalk.cyan('  -v, --view                 create a new view\n'));
+    console.info(chalk.cyan('  -w, --view                 create a new view\n'));
+  } catch (err) {
+    if (err) {
+      switch (err.code) {
+        default:
+          console.error(err);
+      }
+    }
+  }
+}
+
+/**
+ * Exibe versão de R3-CLI.
+*/
+const showVersion = async () => {
+  const pjson = require('./package.json');
+
+  try {
+    console.info(chalk.blue(`${pjson.version} version\n`));
   } catch (err) {
     if (err) {
       switch (err.code) {
@@ -231,14 +250,16 @@ const run = () => {
   if (args.length > 0) {
     if (args[0] == '--help' || args[0] == '-h') {
       showCommands();
+    } else if (args[0] == '--version' || args[0] == '-v') {
+      showVersion();
     } else if (args[0] == '--create' || args[0] == '-c') {
       createProject();
     } else if (args[0] == '--route' || args[0] == '-r') {
       createRoute();
-    } else if (args[0] == '--view' || args[0] == '-v') {
+    } else if (args[0] == '--view' || args[0] == '-w') {
       createView();
     } else {
-      console.error(chalk.error(`Command '${args[0]}' not found!\n`));
+      console.error(chalk.red(`Command 'r3-cli ${args[0]}' not found!\n`));
       showCommands();
     }
   } else {
