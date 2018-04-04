@@ -36,32 +36,40 @@ You will found the initial Project structure:
 
 ```note
 my-app
+├── .gitignore
+├── package.json
 ├── README.md
 ├── node_modules
-├── package.json
-├── .gitignore
-├── client
-│   └── index.html
-│   └── index.js
-├── config
-│   └── index.js
-│   └── config.env.json
-│   └── response.status.json
-├── server
-│   └── index.js
-│   └── server.js
-├── public
-│   └── images
-│   └── fonts
-│   └── styles
 └── source
-    └── views
-        └── templates
-        └── view
-        └── imports.js
-    └── CommonReducer.js
-    └── Reducers.js
-    └── Routers.js
+    ├── assets
+    │   └── fonts
+    │   └── images
+    │   └── styles
+    │
+    ├── client
+    │   └── index.ejs
+    │   └── index.html
+    │   └── index.js
+    │
+    ├── config
+    │   └── index.js
+    │   └── config.env.json
+    │   └── response.status.json
+    │
+    ├── server
+    │   └── excludesExtensions.js
+    │   └── index.js
+    │   └── server.js
+    │   └── template.js
+    │
+    ├── views
+    │   └── templates
+    │   └── view
+    │   └── imports.js
+    │
+    ├── AppReducer.js
+    ├── Reducers.js
+    ├── Routes.js
     └── Store.js
 ```
 

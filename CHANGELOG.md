@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.4 (April 4, 2018)
+## 2.0.0 (April 4, 2018)
 
 ### Restruturação do projeto base
 
