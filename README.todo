@@ -10,7 +10,6 @@ Todo:
     [APP] - [INNER-PROJECT] - [STYLE] - [VIEW] - [SERVER] - [WEBPACK] - [CLIENT]
 
   New:
-    ☐ [INNER-PROJECT] Remove FontAwesome 5. @high
     ☐ [WEBPACK] Update Vendor on Webpack. @high
     ☐ [STYLE] New style for Menu. @high
     ☐ [APP] Implementar sujestão de plugins vscode. @low
@@ -24,5 +23,6 @@ Todo:
 
   Done:
     ✔ [APP] Implement README.todo. @high @done(18-04-16 23:59)
+    ✔ [INNER-PROJECT] Remove FontAwesome 5. @high @done(18-04-17 00:05)
 
   Archived:
