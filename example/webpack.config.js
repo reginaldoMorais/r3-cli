@@ -53,7 +53,24 @@ module.exports = {
 
   entry: {
     client: `${srcPath}/client/index.js`,
-    vendor: ['react', 'react-dom', 'react-router-dom', 'reactstrap'],
+    vendor: [
+      'prop-types',
+      'react',
+      'react-burger-menu',
+      'react-dom',
+      'react-redux',
+      'react-redux-toastr',
+      'react-router-dom',
+      'react-table',
+      'reactstrap',
+      'redux',
+      'redux-burger-menu',
+      'redux-form',
+      'redux-multi',
+      'redux-persist',
+      'redux-promise',
+      'redux-thunk',
+    ],
   },
 
   output: {
