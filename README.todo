@@ -1,0 +1,28 @@
+Project:
+  React + Redux + Router CLI.
+
+Advices:
+  To better enjoy this file of TODO's I advise you to use the editor VSCode of Microsoft with the plugin TODO+ (fabiospampinato.vscode-todo-plus) de Fabio Spampinato.
+
+Todo:
+
+  Tags:
+    [APP] - [INNER-PROJECT] - [STYLE] - [VIEW] - [SERVER] - [WEBPACK] - [CLIENT]
+
+  New:
+    ☐ [INNER-PROJECT] Remove FontAwesome 5. @high
+    ☐ [WEBPACK] Update Vendor on Webpack. @high
+    ☐ [STYLE] New style for Menu. @high
+    ☐ [APP] Implementar sujestão de plugins vscode. @low
+    ☐ [INNER-PROJECT] Review Eslint. @low
+    ☐ [INNER-PROJECT] Implement i18n. @low
+    ☐ [VIEW] Trocar views por view. @low
+
+  Refactor:
+
+  Fix:
+
+  Done:
+    ✔ [APP] Implement README.todo. @high @done(18-04-16 23:59)
+
+  Archived:
