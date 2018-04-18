@@ -11,7 +11,6 @@ Todo:
 
   New:
     ☐ [STYLE] New style for Menu. @high
-    ☐ [APP] Implementar sujestão de plugins vscode. @low
     ☐ [INNER-PROJECT] Review Eslint. @low
     ☐ [INNER-PROJECT] Implement i18n. @low
     ☐ [VIEW] Change views folder name by view. @low
@@ -24,5 +23,6 @@ Todo:
     ✔ [APP] Implement README.todo. @high @done(18-04-16 23:59)
     ✔ [INNER-PROJECT] Remove FontAwesome 5. @high @done(18-04-17 00:05)
     ✔ [WEBPACK] Update Vendor on Webpack. @high @done(18-04-17 02:10)
+    ✔ [APP] Implement vscode plugins suggestion. @low @done(18-04-17 22:26)
 
   Archived:
