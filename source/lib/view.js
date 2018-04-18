@@ -18,7 +18,7 @@ module.exports = {
     status.start();
 
     try {
-      fs.mkdirSync(`./source/views/view/${name}`);
+      fs.mkdirSync(`./source/view/views/${name}`);
       module.exports.createComponent(name);
     } catch (err) {
       throw err;
@@ -32,7 +32,7 @@ module.exports = {
 
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/${component}.js`;
+    const file = `./source/view/views/${name}/${component}.js`;
     const content = componentFile(component);
 
     touch(file);
@@ -46,7 +46,7 @@ module.exports = {
   createContainer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/${component}Container.js`;
+    const file = `./source/view/views/${name}/${component}Container.js`;
     const content = containerFile(component);
 
     touch(file);
@@ -60,7 +60,7 @@ module.exports = {
   createAction: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/${component}Actions.js`;
+    const file = `./source/view/views/${name}/${component}Actions.js`;
     const content = actionFile(name);
 
     touch(file);
@@ -74,7 +74,7 @@ module.exports = {
   createReducer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/${component}Reducer.js`;
+    const file = `./source/view/views/${name}/${component}Reducer.js`;
     const content = reducerFile(name);
 
     touch(file);
@@ -89,7 +89,7 @@ module.exports = {
     const reducer = name.charAt(0).toUpperCase() + name.slice(1) + 'Reducer';
 
     try {
-      const importStr = `/* Reducers */\nimport ${reducer} from './views/view/${name}/${reducer}';`;
+      const importStr = `/* Reducers */\nimport ${reducer} from './view/views/${name}/${reducer}';`;
       const reducerStr = `const rootReducer = combineReducers({\n  ${name}: ${reducer},`;
 
       module.exports.setReducerImport(importStr);
@@ -114,7 +114,7 @@ module.exports = {
   },
 
   deleteView: name => {
-    fsx.removeSync(`./source/views/view/${name}`);
+    fsx.removeSync(`./source/view/views/${name}`);
     console.error(chalk.red(`\n  \u2715 View ${name.toUpperCase()} removidas!`));
     process.exit();
   },

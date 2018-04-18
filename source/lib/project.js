@@ -58,7 +58,7 @@ module.exports = {
 
   copyViews: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/views`);
+      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/view`);
       console.info(chalk.green('  \u2713 Views criado'));
     } catch (err) {
       console.error(err);

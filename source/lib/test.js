@@ -16,7 +16,7 @@ module.exports = {
     status.start();
 
     try {
-      fs.mkdirSync(`./source/views/view/${name}/__test__`);
+      fs.mkdirSync(`./source/view/views/${name}/__test__`);
       module.exports.createComponentTest(name);
     } catch (err) {
       throw err;
@@ -28,7 +28,7 @@ module.exports = {
   createComponentTest: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/__test__/${component}.spec.js`;
+    const file = `./source/view/views/${name}/__test__/${component}.spec.js`;
     const content = componentTestFile(component);
 
     touch(file);
@@ -42,7 +42,7 @@ module.exports = {
   createContainerTest: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/__test__/${component}Container.spec.js`;
+    const file = `./source/view/views/${name}/__test__/${component}Container.spec.js`;
     const content = containerTestFile(component);
 
     touch(file);
@@ -56,7 +56,7 @@ module.exports = {
   createActionTest: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/views/view/${name}/__test__/${component}Actions.spec.js`;
+    const file = `./source/view/views/${name}/__test__/${component}Actions.spec.js`;
     const content = actionTestFile(name);
 
     touch(file);
@@ -66,7 +66,7 @@ module.exports = {
   },
 
   deleteTest: name => {
-    fsx.removeSync(`./source/views/view/${name}/__test__`);
+    fsx.removeSync(`./source/view/views/${name}/__test__`);
     console.error(chalk.red(`\n  \u2715 Testes removidos!`));
     process.exit();
   },
