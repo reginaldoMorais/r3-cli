@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/reginaldoMorais/r3-cli-vscode-snippet">
+    <img alt="r3-cli" src="https://image.ibb.co/cZZcUn/r3_cli_snippet_icons.png" width="244">
+  </a>
+</p>
+
 # R3-CLI
 
 Create React applications with Redux and Router v4, very fast.

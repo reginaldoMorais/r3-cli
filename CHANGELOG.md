@@ -1,26 +1,36 @@
 # Changelog
 
+## 3.0.0 (April 24, 2018)
+
+### Restructuring base project
+
+* Implement README.todo. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Remove FontAwesome 5. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Update Vendor on Webpack. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Implement vscode plugins suggestion. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Change views folder name by view and create page folder. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 2.0.0 (April 4, 2018)
 
-### Restruturação do projeto base
+### Restructuring base project
 
-* Atualiza Node version 8.11. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Implementa Server Side Rendering com React-Router 4. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Recriar processo e scripts de build. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Refatora extrutura do projeto base. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Refatora geração de Assets. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Projeto exemplo. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Updates Node version 8.11. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Implements Server Side Rendering with React-Router 4. ([@reginaldoMorais](https://github.com/reginalofMorais))
+* Rebuild process and build scripts. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Refatora structure of the base project. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Reflecting Assets generation. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Example project. ([@reginaldoMorais](https://github.com/reginaldoMorais))
 
 ## 1.0.3 (March 24, 2018)
 
-### Cobertura de testes
+### Test coverage
 
-* Atualiza Node version 8.10. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Cobertura de testes. ([@reginaldoMorais](https://github.com/reginaldoMorais))
-* Inclusão de novas rotas no menu. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Updates Node version 8.10. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Coverage of tests. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Inclusion of new routes in the menu. ([@reginaldoMorais](https://github.com/reginaldoMorais))
 
 ## 1.0.1 (March 7, 2018)
 
-### Primeira Versão estável
+### First stable version
 
-* Implementa projeto base. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Implements base project. ([@reginaldoMorais](https://github.com/reginaldoMorais))
