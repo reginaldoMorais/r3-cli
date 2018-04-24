@@ -4,7 +4,7 @@ import { reducer as toastrReducer } from 'react-redux-toastr';
 import { reducer as burgerMenu } from 'redux-burger-menu';
 
 /* Reducers */
-import MenuReducer from './views/templates/menu/MenuReducer';
+import MenuReducer from './view/templates/menu/MenuReducer';
 import AppReducer from './AppReducer';
 
 const rootReducer = combineReducers({

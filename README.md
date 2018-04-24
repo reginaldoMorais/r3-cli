@@ -42,30 +42,42 @@ my-app
 ├── node_modules
 └── source
     ├── assets
-    │   └── fonts
-    │   └── images
+    │   ├── fonts
+    │   ├── images
     │   └── styles
     │
     ├── client
-    │   └── index.ejs
-    │   └── index.html
+    │   ├── index.ejs
+    │   ├── index.html
     │   └── index.js
     │
     ├── config
-    │   └── index.js
-    │   └── config.env.json
+    │   ├── index.js
+    │   ├── config.env.json
     │   └── response.status.json
     │
     ├── server
-    │   └── excludesExtensions.js
-    │   └── index.js
-    │   └── server.js
+    │   ├── excludesExtensions.js
+    │   ├── index.js
+    │   ├── server.js
     │   └── template.js
     │
-    ├── views
-    │   └── templates
-    │   └── view
-    │   └── imports.js
+    ├── view
+    │   ├── templates
+    │   ├── views
+    │   │  ├── controller
+    │   │  ├── pages
+    │   │  │  └── index
+    │   │  │     ├── __test__
+    │   │  │     ├── Index.js
+    │   │  │     ├── IndexActions.js
+    │   │  │     └── IndexContainer.js
+    │   │  │
+    │   │  ├── In.js
+    │   │  ├── Out.js
+    │   │  └── PageNotFound.js
+    │   │
+    │   └── Imports.js
     │
     ├── AppReducer.js
     ├── Reducers.js

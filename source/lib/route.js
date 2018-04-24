@@ -16,14 +16,14 @@ module.exports = {
       const component = name.charAt(0).toUpperCase() + name.slice(1);
       let file;
 
-      const importStr = `/* Containers / Components */\nimport ${component} from './${name}/${container}';`;
+      const importStr = `/* Containers / Components */\nimport ${component} from './pages/${name}/${container}';`;
       let routeStr;
 
       if (choise.option == 'interna') {
-        file = `./source/views/view/In.js`;
+        file = `./source/view/views/In.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/in/${name}" component={${component}} />`;
       } else {
-        file = `./source/views/view/Out.js`;
+        file = `./source/view/views/Out.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/${name}" component={${component}} />`;
       }
 
@@ -60,7 +60,7 @@ module.exports = {
   },
 
   setMenu: (name, choise) => {
-    const file = `./source/views/templates/menu/MenuReducer.js`;
+    const file = `./source/view/templates/menu/MenuReducer.js`;
     let link;
 
     if (choise.option == 'interna') {
