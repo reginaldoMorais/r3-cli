@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 /* Libs */
 
 /* Containers / Components */
-import Index from './index/IndexContainer';
+import Index from './pages/index/IndexContainer';
 import PageNotFound from './PageNotFound';
 import Menu from '../templates/menu/MenuContainer';
 import Messages from '../templates/Messages';

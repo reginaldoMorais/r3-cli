@@ -16,7 +16,7 @@ module.exports = {
       const component = name.charAt(0).toUpperCase() + name.slice(1);
       let file;
 
-      const importStr = `/* Containers / Components */\nimport ${component} from './${name}/${container}';`;
+      const importStr = `/* Containers / Components */\nimport ${component} from './pages/${name}/${container}';`;
       let routeStr;
 
       if (choise.option == 'interna') {

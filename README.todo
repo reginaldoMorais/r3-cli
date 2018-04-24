@@ -10,6 +10,7 @@ Todo:
     [APP] - [INNER-PROJECT] - [STYLE] - [VIEW] - [SERVER] - [WEBPACK] - [CLIENT]
 
   New:
+    ☐ [APP] Bufix create route undo. @critical
     ☐ [STYLE] New style for body. @high
     ☐ [INNER-PROJECT] Review Eslint. @low
     ☐ [INNER-PROJECT] Implement i18n. @low
