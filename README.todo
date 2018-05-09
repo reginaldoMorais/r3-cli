@@ -11,7 +11,6 @@ Todo:
 
   New:
     ☐ [APP] Bufix create route undo. @critical
-    ☐ [STYLE] New style for body. @high
     ☐ [INNER-PROJECT] Review Eslint. @low
     ☐ [INNER-PROJECT] Implement i18n. @low
 
@@ -25,5 +24,6 @@ Todo:
     ✔ [WEBPACK] Update Vendor on Webpack. @high @done(18-04-17 02:10)
     ✔ [APP] Implement vscode plugins suggestion. @low @done(18-04-17 22:26)
     ✔ [VIEW] Change views folder name by view. @low @done(18-04-18 00:59)
+    ✔ [STYLE] New style for body. @high @done(18-05-08 23:52)
 
   Archived:
