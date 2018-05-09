@@ -20,6 +20,10 @@ class ${component} extends Component {
   }
 }
 
+${component}.defaultProps = {};
+
+${component}.propTypes = {};
+
 export default ${component};
 `;
 };

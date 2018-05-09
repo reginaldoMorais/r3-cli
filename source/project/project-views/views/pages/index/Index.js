@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'reactstrap';
 
 /* Libs */
+import { Row, Col, Container } from 'reactstrap';
 
 /* Containers / Components */
 
@@ -18,6 +18,8 @@ class Index extends Component {
     );
   }
 }
+
+Index.defaultProps = {};
 
 Index.propTypes = {};
 

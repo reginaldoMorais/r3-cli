@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
 
 /* Libs */
+import { Row, Col } from 'reactstrap';
 
 /* Containers / Components */
 import Content from '../templates/content/ContentContainer';

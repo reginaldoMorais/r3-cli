@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 
 /* Libs */
+import { Navbar, NavbarBrand } from 'reactstrap';
 
 /* Containers / Components */
 

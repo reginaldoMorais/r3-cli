@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+/* Libs */
+
+/* Containers / Components */
+
 class Footer extends Component {
   render() {
     return (

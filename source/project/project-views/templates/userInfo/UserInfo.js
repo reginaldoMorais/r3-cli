@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+/* Libs */
+
+/* Containers / Components */
+
 class UserInfo extends Component {
   render() {
     const user = this.props.user || {};

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+/* Libs */
 import { Link } from 'react-router-dom';
 import { slide as MenuSlide } from 'react-burger-menu';
 import { decorator as reduxBurgerMenu } from 'redux-burger-menu';
-
-/* Libs */
 
 /* Containers / Components */
 import If from '../If';

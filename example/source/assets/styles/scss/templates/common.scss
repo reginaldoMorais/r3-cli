@@ -2,7 +2,7 @@
  * Common
  */
 
-html {
+ html {
   height: 100%;
 
   body {
@@ -22,23 +22,16 @@ html {
       font-family: 'Dosis-Regular';
     }
 
-    #wrapper {
+    #root {
       height: 100%;
       background: #DDD;
     }
 
-    .alert {
-      box-shadow: 0 .5rem 1.7rem -.8rem;
-      text-align: left;
-      display: flex;
+    .page-in {
+      margin-top: 50px;
 
-      & > i {
-        margin-right: .5rem;
-        font-size: 1rem;
-      }
-
-      span {
-        font-size: .8rem;
+      @media (max-width: 768px) {
+        margin-top: 0;
       }
     }
 
@@ -60,34 +53,6 @@ html {
       }
     }
 
-    .gray-bg {
-      background-color: #f3f3f4;
-      background-color: #DDD;
-      height: 100%;
-    }
-
-    .anthracite-bg {
-      background-color: #454748;
-      height: 100%;
-    }
-
-    .middle-box {
-      max-width: 400px;
-      z-index: 100;
-      margin: 0 auto;
-      padding-top: 40px;
-    }
-
-    .page-in {
-      padding: 0 0 100px;
-      background: #DDD;
-      margin-top: 50px;
-
-      @media (max-width: 768px) {
-        margin-top: 0;
-      }
-    }
-
     .menu-right {
       h1 {
         margin-left: 0;
@@ -101,9 +66,21 @@ html {
     .badge {
       font-size: .8rem;
     }
+
+    .alert {
+      box-shadow: 0 .5rem 1.7rem -.8rem;
+      text-align: left;
+      display: flex;
+
+      & > i {
+        margin-right: .5rem;
+        font-size: 1rem;
+      }
+
+      span {
+        font-size: .8rem;
+      }
+    }
   }
 }
 
-.redux-toastr .toastr .rrt-middle-container .rrt-title {
-  font-size: 14px !important;
-}

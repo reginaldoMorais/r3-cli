@@ -22,6 +22,7 @@ import '../assets/styles/scss/templates/modal.scss';
 import '../assets/styles/scss/templates/filter.scss';
 import '../assets/styles/scss/templates/form.scss';
 import '../assets/styles/scss/templates/button.scss';
+import '../assets/styles/scss/templates/toastr.scss';
 import '../assets/styles/scss/templates/sweet-alert.scss';
 
 /* Components */

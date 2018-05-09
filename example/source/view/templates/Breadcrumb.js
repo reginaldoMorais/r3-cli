@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
+/* Libs */
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
+
+/* Containers / Components */
 
 class Breadcrumb extends Component {
   constructor() {

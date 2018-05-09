@@ -1,4 +1,5 @@
 import '../../../assets/styles/scss/components/loadingBar.scss';
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'reactstrap';
 
 /* Libs */
+import { Container } from 'reactstrap';
 
 /* Containers / Components */
 import LoadingBar from '../loadingBar/LoadingBarContainer';
