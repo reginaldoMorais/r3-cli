@@ -3,10 +3,10 @@ module.exports = name => {
   return `import React from 'react';
 import renderer from 'react-test-renderer';
 
-import ${nameUpperCase}Component from '../${nameUpperCase}';
-
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+
+import ${nameUpperCase}Component from '../${nameUpperCase}';
 
 Enzyme.configure({ adapter: new Adapter() });
 

@@ -1,16 +1,16 @@
 module.exports = name => {
   const nameUpperCase = name.charAt(0).toUpperCase() + name.slice(1);
   return `import React from 'react';
+
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 import { Provider } from 'react-redux';
-
 import { createStore } from 'redux';
-import reducers from '../../../../../Reducers';
 
+import reducers from '../../../../../Reducers';
 import ${nameUpperCase}Container from '../${nameUpperCase}Container';
 import ${nameUpperCase}Component from '../${nameUpperCase}';
-
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 
