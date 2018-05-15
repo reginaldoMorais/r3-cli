@@ -83,7 +83,7 @@ module.exports = {
     }
   },
 
-  copyPublic: projectName => {
+  copyAssets: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-public`, `${projectName}/source/assets`);
       console.info(chalk.green('  \u2713 Public criado'));

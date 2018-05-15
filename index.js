@@ -16,6 +16,7 @@ const inquirer = require('./source/lib/inquirer');
 const files = require('./source/lib/files');
 const project = require('./source/lib/project');
 const view = require('./source/lib/view');
+const style = require('./source/lib/style');
 const route = require('./source/lib/route');
 
 const showAppHeader = () => {
@@ -64,6 +65,9 @@ const createRoute = async () => {
 
     console.info(chalk.blue('\u25A0 Criando nova View, por favor aguarde...'));
     await view.createView(routeName);
+
+    console.info(chalk.blue('\u25A0 Criando novo Estilo, por favor aguarde...'));
+    await style.createStyle(routeName);
 
     const choise = await inquirer.askRouteType();
 
@@ -131,7 +135,7 @@ const createProject = async () => {
       await project.copySettings(projectName);
       await project.copyConfig(projectName);
       await project.copyServer(projectName);
-      await project.copyPublic(projectName);
+      await project.copyAssets(projectName);
       await project.copyClient(projectName);
       await project.setProjectName(projectName);
     } catch (err) {

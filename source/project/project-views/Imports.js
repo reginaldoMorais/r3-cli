@@ -31,3 +31,6 @@ import '../assets/styles/scss/components/menu.scss';
 import '../assets/styles/scss/components/breadcrumb.scss';
 import '../assets/styles/scss/components/footer.scss';
 import '../assets/styles/scss/components/react-table.scss';
+
+/* Pages */
+import '../assets/styles/scss/pages/index.scss';
