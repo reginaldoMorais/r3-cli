@@ -38,9 +38,9 @@ module.exports = {
     fs.writeFileSync(`./source/view/Imports.js`, result, 'utf-8');
   },
 
-  deleteView: name => {
+  deleteStyle: name => {
     fsx.removeSync(`./source/assets/styles/scss/pages/${name.toLowerCase()}.scss`);
-    console.error(chalk.red(`\n  \u2715 View ${name.toUpperCase()} removidas!`));
+    console.error(chalk.red(`\n  \u2715 Style ${name.toUpperCase()} removed!`));
     process.exit();
   },
 };

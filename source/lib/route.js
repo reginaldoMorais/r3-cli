@@ -8,7 +8,7 @@ const view = require('./view');
 
 module.exports = {
   createRoute: (name, choise) => {
-    const status = new Spinner('Implementando nova rota, por favor aguarde...');
+    const status = new Spinner('Implementing a new Route, please wait...');
     status.start();
 
     try {
@@ -32,12 +32,12 @@ module.exports = {
         module.exports.setRoute(file, routeStr);
         module.exports.setMenu(name, choise);
       } catch (err) {
-        console.error(chalk.red(`\n  \u2715 Erro ao criar a Rota ${name.toUpperCase()}!`));
+        console.error(chalk.red(`\n  \u2715 Error creating Route ${name.toUpperCase()}!`));
         console.error(err);
         view.deleteView(name);
       }
 
-      console.info(chalk.green('  \u2713 Success create Route'));
+      console.info(chalk.green('  \u2713 Successful Route creation'));
     } catch (err) {
       throw err;
     } finally {
@@ -63,7 +63,7 @@ module.exports = {
     const file = `./source/view/templates/menu/MenuReducer.js`;
     let link;
 
-    if (choise.option == 'interna') {
+    if (choise.option == 'internal') {
       link = `/in/${name}`;
     } else {
       link = `/${name}`;

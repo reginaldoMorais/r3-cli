@@ -12,7 +12,7 @@ const containerTestFile = require('./files/containerTest');
 
 module.exports = {
   createTest: name => {
-    const status = new Spinner('Criando extrutura de Tests, por favor aguarde...');
+    const status = new Spinner('Creating test structure, please wait...');
     status.start();
 
     try {
@@ -34,7 +34,7 @@ module.exports = {
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.info(chalk.green('  \u2713 Success create ComponentTest'));
+    console.info(chalk.green('  \u2713 Successful ComponentTest creation'));
 
     module.exports.createContainerTest(name);
   },
@@ -48,7 +48,7 @@ module.exports = {
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.info(chalk.green('  \u2713 Success create ContainerTest'));
+    console.info(chalk.green('  \u2713 Successful ContainerTest creation'));
 
     module.exports.createActionTest(name);
   },
@@ -62,12 +62,12 @@ module.exports = {
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.info(chalk.green('  \u2713 Success create ActionTest'));
+    console.info(chalk.green('  \u2713 Successful ActionTest creation'));
   },
 
   deleteTest: name => {
     fsx.removeSync(`./source/view/views/pages/${name}/__test__`);
-    console.error(chalk.red(`\n  \u2715 Testes removidos!`));
+    console.error(chalk.red(`\n  \u2715 Testes removed!`));
     process.exit();
   },
 };

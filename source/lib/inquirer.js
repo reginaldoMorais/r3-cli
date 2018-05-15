@@ -6,9 +6,9 @@ module.exports = {
       {
         name: 'option',
         type: 'list',
-        message: 'O que deseja fazer:',
-        choices: ['Criar novo projeto', 'Criar Rota', 'Criar View'],
-        default: 'Criar novo projeto',
+        message: 'What do you want to do:',
+        choices: ['Create a new project', 'Create a Route', 'Create a View', 'Show available commands'],
+        default: 'Create new project',
       },
     ];
     return inquirer.prompt(questions);
@@ -18,12 +18,12 @@ module.exports = {
       {
         name: 'projectName',
         type: 'input',
-        message: 'Informe um nome para o Projeto:',
+        message: 'Enter a name for the Project:',
         validate: value => {
           if (value.length) {
             return true;
           } else {
-            return 'Por favor, entre com um nome para o Projeto.';
+            return 'Please enter a name for the Project.';
           }
         },
       },
@@ -35,12 +35,12 @@ module.exports = {
       {
         name: 'routeName',
         type: 'input',
-        message: 'Informe a rota.\n  Os caracteres devem ser minúsculos:',
+        message: 'Enter a Route.\n The characters must be lowercase:',
         validate: value => {
           if (value.length) {
             return true;
           } else {
-            return 'Por favor, entre com uma rota válida.';
+            return 'Please enter a valid Route.';
           }
         },
       },
@@ -52,9 +52,9 @@ module.exports = {
       {
         name: 'option',
         type: 'list',
-        message: 'Informe qual tipo de rota:',
-        choices: ['externa', 'interna'],
-        default: 'externa',
+        message: 'Tell me which route type do you want:',
+        choices: ['external', 'internal'],
+        default: 'external',
       },
     ];
     return inquirer.prompt(questions);
@@ -64,12 +64,12 @@ module.exports = {
       {
         name: 'viewName',
         type: 'input',
-        message: 'Informe o nome da View.\n  Os caracteres devem ser minúsculos:',
+        message: 'Enter the name of the View.\n The characters must be lowercase:',
         validate: value => {
           if (value.length) {
             return true;
           } else {
-            return 'Por favor, entre com um nome válido.';
+            return 'Please enter a valid name.';
           }
         },
       },

@@ -14,7 +14,7 @@ const containerFile = require('./files/container');
 
 module.exports = {
   createView: name => {
-    const status = new Spinner('Criando extrutura da View, por favor aguarde...');
+    const status = new Spinner('Creating View structure, please wait...');
     status.start();
 
     try {
@@ -38,7 +38,7 @@ module.exports = {
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.info(chalk.green('  \u2713 Success create Component'));
+    console.info(chalk.green('  \u2713 Successful Component creation'));
 
     module.exports.createContainer(name);
   },
@@ -52,7 +52,7 @@ module.exports = {
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.info(chalk.green('  \u2713 Success create Container'));
+    console.info(chalk.green('  \u2713 Successful Container creation'));
 
     module.exports.createAction(name);
   },
@@ -66,7 +66,7 @@ module.exports = {
     touch(file);
     fs.writeFileSync(file, content);
 
-    console.info(chalk.green('  \u2713 Success create Action'));
+    console.info(chalk.green('  \u2713 Successful Action creation'));
 
     module.exports.createReducer(name);
   },
@@ -82,7 +82,7 @@ module.exports = {
 
     module.exports.setReducerFile(name);
 
-    console.info(chalk.green('  \u2713 Success create Reducer'));
+    console.info(chalk.green('  \u2713 Successful Reducer creation'));
   },
 
   setReducerFile: name => {
@@ -95,7 +95,7 @@ module.exports = {
       module.exports.setReducerImport(importStr);
       module.exports.setReducer(reducerStr);
     } catch (err) {
-      console.error(chalk.red(`\nErro ao criar o Reducer ${name.toUpperCase()}!`));
+      console.error(chalk.red(`\nError creating Reducer ${name.toUpperCase()}!`));
       console.error(err);
       module.exports.deleteView(name);
     }
@@ -115,7 +115,7 @@ module.exports = {
 
   deleteView: name => {
     fsx.removeSync(`./source/view/views/pages/${name}`);
-    console.error(chalk.red(`\n  \u2715 View ${name.toUpperCase()} removidas!`));
+    console.error(chalk.red(`\n  \u2715 View ${name.toUpperCase()} removed!`));
     process.exit();
   },
 };

@@ -35,13 +35,13 @@ module.exports = {
       }
     });
 
-    console.info(chalk.green('  \u2713 Project Name inserido'));
+    console.info(chalk.green('  \u2713 Project Name inserted'));
   },
 
   copySettings: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-settings`, projectName);
-      console.info(chalk.green('  \u2713 Settings criado'));
+      console.info(chalk.green('  \u2713 Settings folder created'));
     } catch (err) {
       console.error(err);
     }
@@ -50,7 +50,7 @@ module.exports = {
   copySource: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-source`, `${projectName}/source`);
-      console.info(chalk.green('  \u2713 Source criado'));
+      console.info(chalk.green('  \u2713 Source folder created'));
     } catch (err) {
       console.error(err);
     }
@@ -59,7 +59,7 @@ module.exports = {
   copyViews: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/view`);
-      console.info(chalk.green('  \u2713 Views criado'));
+      console.info(chalk.green('  \u2713 Views folder created'));
     } catch (err) {
       console.error(err);
     }
@@ -68,7 +68,7 @@ module.exports = {
   copyConfig: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-config`, `${projectName}/source/config`);
-      console.info(chalk.green('  \u2713 Config criado'));
+      console.info(chalk.green('  \u2713 Config folder created'));
     } catch (err) {
       console.error(err);
     }
@@ -77,7 +77,7 @@ module.exports = {
   copyServer: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-server`, `${projectName}/source/server`);
-      console.info(chalk.green('  \u2713 Server criado'));
+      console.info(chalk.green('  \u2713 Server folder created'));
     } catch (err) {
       console.error(err);
     }
@@ -86,7 +86,7 @@ module.exports = {
   copyAssets: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-assets`, `${projectName}/source/assets`);
-      console.info(chalk.green('  \u2713 Assets criado'));
+      console.info(chalk.green('  \u2713 Assets folder created'));
     } catch (err) {
       console.error(err);
     }
@@ -95,7 +95,7 @@ module.exports = {
   copyClient: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-client`, `${projectName}/source/client`);
-      console.info(chalk.green('  \u2713 Client criado'));
+      console.info(chalk.green('  \u2713 Client folder created'));
     } catch (err) {
       console.error(err);
     }

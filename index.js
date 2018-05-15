@@ -38,7 +38,7 @@ const showAppHeader = () => {
 */
 const hasProject = () => {
   if (!files.fileExists(`.r3-cli`)) {
-    console.error(chalk.red('\n  Não foi encontrado Projeto válido!\n'));
+    console.error(chalk.red('\n  No valid project found!\n'));
     process.exit();
   }
 }
@@ -59,19 +59,19 @@ const createRoute = async () => {
     const routeName = answers.routeName;
 
     if (files.directoryExists(`./source/views/view/${routeName}`)) {
-      console.error(chalk.red('\n  Esta Rota já existe!\n'));
+      console.error(chalk.red('\n  This Route already exists!\n'));
       process.exit();
     }
 
-    console.info(chalk.blue('\u25A0 Criando nova View, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Creating new View, please wait...'));
     await view.createView(routeName);
 
-    console.info(chalk.blue('\u25A0 Criando novo Estilo, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Creating a new Style, please wait...'));
     await style.createStyle(routeName);
 
     const choise = await inquirer.askRouteType();
 
-    console.info(chalk.blue('\u25A0 Criando nova Rota, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Creating a new Route, please wait...'));
     await route.createRoute(routeName, choise);
   } catch (err) {
     if (err) {
@@ -94,11 +94,11 @@ const createView = async () => {
     const viewName = answers.viewName;
 
     if (files.directoryExists(`./source/views/view/${viewName}`)) {
-      console.error(chalk.red('\n  Esta View já existe!\n'));
+      console.error(chalk.red('\n  This View already exists!\n'));
       process.exit();
     }
 
-    console.info(chalk.blue('\u25A0 Criando nova View, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Creating new View, please wait...'));
     await view.createView(viewName);
   } catch (err) {
     if (err) {
@@ -119,13 +119,13 @@ const createProject = async () => {
     const projectName = answers.projectName;
 
     if (files.directoryExists(projectName)) {
-      console.error(chalk.red('\n  Já existe um projeto com este nome!\n'));
+      console.error(chalk.red('\n  A project with this name already exists!\n'));
       process.exit();
     }
 
-    console.info(chalk.blue('\u25A0 Criando Projeto, por favor aguarde...'));
+    console.info(chalk.blue('\u25A0 Creating Project, please wait...'));
 
-    const status = new Spinner(`Processando arquivos do novo projeto, por favor aguarde...`);
+    const status = new Spinner(`Processing files for the new project, please wait...`);
     status.start();
 
     try {
@@ -206,22 +206,22 @@ const showMenu = async () => {
     const answers = await inquirer.askMenuOption();
 
     switch (answers.option) {
-      case 'Criar novo projeto': {
+      case 'Create a new project': {
         createProject();
         break;
       }
 
-      case 'Criar Rota': {
+      case 'Create a Route': {
         createRoute();
         break;
       }
 
-      case 'Criar View': {
+      case 'Create a View': {
         createView();
         break;
       }
 
-      case 'Exibir comandos': {
+      case 'Show available commands': {
         showCommands();
         break;
       }
