@@ -25,5 +25,8 @@ Todo:
     ✔ [APP] Implement vscode plugins suggestion. @low @done(18-04-17 22:26)
     ✔ [VIEW] Change views folder name by view. @low @done(18-04-18 00:59)
     ✔ [STYLE] New style for body. @high @done(18-05-08 23:52)
+    ✔ [APP] Implement generate styles. @low @done(18-05-14 23:54)
+    ✔ [APP] Refactoring Public folder to Assets folder. @low @done(18-05-14 23:54)
+    ✔ [APP] Refactoring display texts from PT-BR to EN. @low @done(18-05-14 23:54)
 
   Archived:
