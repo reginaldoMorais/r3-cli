@@ -6,11 +6,7 @@ const CLI = require('clui');
 const Spinner = CLI.Spinner;
 
 // Libs
-const test = require('./test');
-const reducerFile = require('./files/reducer');
-const actionFile = require('./files/action');
 const styleFile = require('./files/style');
-const containerFile = require('./files/container');
 
 module.exports = {
   createStyle: name => {

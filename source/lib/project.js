@@ -85,8 +85,8 @@ module.exports = {
 
   copyAssets: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-public`, `${projectName}/source/assets`);
-      console.info(chalk.green('  \u2713 Public criado'));
+      fsx.copySync(`${__dirname}/../project/project-assets`, `${projectName}/source/assets`);
+      console.info(chalk.green('  \u2713 Assets criado'));
     } catch (err) {
       console.error(err);
     }
