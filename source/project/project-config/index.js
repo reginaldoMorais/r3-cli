@@ -1,6 +1,6 @@
 const config = require('./config.env.json');
 
-const getEnviromentConfig = () => {
+export const getEnviromentConfig = () => {
   const env = process.env.NODE_ENV || window.__ENV__;
   switch (env) {
     case 'production':
