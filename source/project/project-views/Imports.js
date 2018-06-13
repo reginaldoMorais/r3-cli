@@ -5,15 +5,6 @@ import '../../node_modules/react-redux-toastr/src/styles/index.scss';
 import '../../node_modules/sweetalert/dist/sweetalert.css';
 import '../../node_modules/react-table/react-table.css';
 
-/* Fonts */
-import '../assets/fonts/Roboto/Roboto-Regular.ttf';
-import '../assets/fonts/Roboto/Roboto-Light.ttf';
-import '../assets/fonts/Russo_One/RussoOne-Regular.ttf';
-import '../assets/fonts/Dosis/Dosis-Regular.ttf';
-import '../assets/fonts/Dosis/Dosis-Bold.ttf';
-import '../assets/fonts/Anton/Anton-Regular.ttf';
-import '../assets/fonts/Nunito/Nunito-Regular.ttf';
-
 /* Templates */
 import '../assets/styles/scss/templates/fonts.scss';
 import '../assets/styles/scss/templates/common.scss';
