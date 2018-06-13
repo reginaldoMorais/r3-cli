@@ -5,7 +5,7 @@ export default (html, initialState, env) => `
             <meta charset="UTF-8">
             <meta content="IE=edge" http-equiv=X-UA-Compatible>
             <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-            <title>{{APP_TITLE}}</title>
+            <title>EXAMPLE</title>
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link rel="icon" type="image/png" href="/assets/favicon.ico" />
             <link href="/assets/main.css" rel="stylesheet">

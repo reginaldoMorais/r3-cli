@@ -1,14 +1,14 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 
+import Enzyme, { mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from '../../../../Reducers';
 
 import UserInfoContainer from '../UserInfoContainer';
 import UserInfoComponent from '../UserInfo';
-
-import Enzyme, { mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 
 Enzyme.configure({ adapter: new Adapter() });
 

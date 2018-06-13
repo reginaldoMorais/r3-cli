@@ -1,12 +1,12 @@
 import React from 'react';
 
-import MenuComponent from '../Menu';
-
-import { createStore } from 'redux';
-import reducers from '../../../../Reducers';
-
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+
+import { createStore } from 'redux';
+
+import reducers from '../../../../Reducers';
+import MenuComponent from '../Menu';
 
 Enzyme.configure({ adapter: new Adapter() });
 

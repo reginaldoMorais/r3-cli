@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const srcPath = path.resolve(__dirname, 'source');
 const distPath = path.resolve(__dirname, 'dist');
@@ -19,6 +20,10 @@ const plugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   }),
+  new CopyWebpackPlugin([
+    { from: `${srcPath}/assets/fonts`, to: `fonts`, flatten: true },
+    { from: `${srcPath}/assets/images`, to: `images` },
+  ]),
 ];
 
 const setPlugins = () => {
