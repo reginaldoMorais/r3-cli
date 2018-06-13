@@ -28,5 +28,7 @@ Todo:
     ✔ [APP] Implement generate styles. @low @done(18-05-14 23:54)
     ✔ [APP] Refactoring Public folder to Assets folder. @low @done(18-05-14 23:54)
     ✔ [APP] Refactoring display texts from PT-BR to EN. @low @done(18-05-14 23:54)
+    ✔ [APP] Bufix when create internal routes. @critical @done(18-06-13 00:58)
+
 
   Archived:

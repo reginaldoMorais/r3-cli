@@ -19,7 +19,7 @@ module.exports = {
       const importStr = `/* Containers / Components */\nimport ${component} from './pages/${name}/${container}';`;
       let routeStr;
 
-      if (choise.option == 'interna') {
+      if (choise.option == 'internal') {
         file = `./source/view/views/In.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/in/${name}" component={${component}} />`;
       } else {
