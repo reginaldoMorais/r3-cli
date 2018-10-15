@@ -4,7 +4,7 @@
     "transform-object-rest-spread"
   ],
   "presets": [
-    "react",
-    "env"
+    "@babel/preset-react",
+    "@babel/preset-env"
   ]
 }
