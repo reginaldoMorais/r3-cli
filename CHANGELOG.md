@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.0.3 (October 15, 2018)
+
+### Refactoring on base project
+
+* Bugfix Webpack version with build crash. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Update Production build scritp and dockerfile. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
+## 3.0.2 (May 14, 2018)
+
+### Refactoring on generator project
+
+* Translate PT-BR to EN. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Refactoring on generator project structure. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 3.0.0 (April 24, 2018)
 
 ### Restructuring base project
