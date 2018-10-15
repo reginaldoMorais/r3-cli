@@ -123,7 +123,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          presets: ['env', 'react'],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: ['transform-object-rest-spread'],
         },
       },
