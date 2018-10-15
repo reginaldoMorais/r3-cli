@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.4 (October 15, 2018)
+
+### Refactoring on base project
+
+* Update all npm modules on base project. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 3.0.3 (October 15, 2018)
 
 ### Refactoring on base project
