@@ -5,13 +5,6 @@
   ],
   "presets": [
     "react",
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 1 version", "ie >= 11"]
-        }
-      }
-    ]
+    "env"
   ]
 }

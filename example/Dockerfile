@@ -1,4 +1,4 @@
-FROM node:8.10-alpine
+FROM node:8.11-alpine
 
 #RUN yum install unzip -y
 
@@ -17,7 +17,7 @@ COPY zip/*.zip $APPLICATION_DIR
 
 RUN unzip *.zip
 
-RUN npm install
+RUN npm install --production
 
 EXPOSE 8080
 

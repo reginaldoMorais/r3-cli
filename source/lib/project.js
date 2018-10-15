@@ -29,7 +29,14 @@ module.exports = {
     files.forEach(file => {
       try {
         let data = fs.readFileSync(file, 'utf-8');
-        let result = data.replace(/{{APP_TITLE}}/g, projectName.toUpperCase());
+        let result;
+
+        if (file.indexOf('package.json') > 0) {
+          result = data.replace(/{{APP_TITLE}}/g, projectName.toLowerCase());
+        } else {
+          result = data.replace(/{{APP_TITLE}}/g, projectName.toUpperCase());
+        }
+
         fs.writeFileSync(file, result, 'utf-8');
       } catch (err) {
         console.error(err);

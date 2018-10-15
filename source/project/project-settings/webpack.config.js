@@ -6,6 +6,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ZipPlugin = require('zip-webpack-plugin');
 
 const srcPath = path.resolve(__dirname, 'source');
 const distPath = path.resolve(__dirname, 'dist');
@@ -37,6 +38,21 @@ const setPlugins = () => {
 
   if (process.env.NODE_ENV !== 'development') {
     plugins.push(new ProgressBarPlugin());
+    plugins.push(
+      new CopyWebpackPlugin([
+        { from: srcPath, to: path.join(distPath, 'source') },
+        { from: path.resolve(__dirname, 'Dockerfile'), to: distPath },
+        { from: path.resolve(__dirname, '.babelrc'), to: distPath },
+        { from: path.resolve(__dirname, 'package.json'), to: distPath },
+      ])
+    );
+    plugins.push(
+      new ZipPlugin({
+        path: '../zip',
+        filename: 'dist.zip',
+        pathPrefix: '',
+      })
+    );
   }
 
   return plugins;

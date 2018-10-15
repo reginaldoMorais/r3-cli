@@ -26,7 +26,7 @@ module.exports = {
       })
     );
 
-    app.use('/assets', express.static('./dist'));
+    app.use('/assets', express.static('./'));
 
     app.get('*', (req, res) => {
       const store = configureStore({}, devTools, isServer);
