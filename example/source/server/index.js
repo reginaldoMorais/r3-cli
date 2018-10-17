@@ -19,6 +19,7 @@ module.exports = app.listen(PORT, () => {
   console.info(chalk.yellow(figlet.textSync(`:: EXAMPLE ::`, { horizontalLayout: 'full' })));
   console.info(chalk.cyan(`==> ✅  Server Up!`));
   console.info(chalk.cyan(`==> 🌎  Mode: ${NODE_ENV}`));
-  console.info(chalk.cyan(`==> 🌎  Server running on: ${uri.uri}:${PORT}/`));
+  console.info(chalk.cyan(`==> 🌎  Port: ${PORT}`));
+  console.info(chalk.cyan(`==> 🌎  Server running on: ${uri.uri}`));
   console.info('');
 });
