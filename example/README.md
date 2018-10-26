@@ -48,3 +48,7 @@ ou
 ```bash
 npm run ls
 ```
+
+## Favicon
+
+Para geração de favicon sugerimos a utilização do site [favicomatic](http://www.favicomatic.com/).
