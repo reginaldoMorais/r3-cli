@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.0.5 (October 26, 2018)
+
+* Bugfix menu is not close. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Bugfix favicon load. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Implement scroll to top. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+* Update server log info. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 3.0.4 (October 15, 2018)
 
 ### Refactoring on base project
