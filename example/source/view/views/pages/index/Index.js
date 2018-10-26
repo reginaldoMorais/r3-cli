@@ -6,6 +6,14 @@ import { Row, Col, Container } from 'reactstrap';
 /* Containers / Components */
 
 class Index extends Component {
+  componentDidMount() {
+    this.scrollToTop();
+  }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <Container>

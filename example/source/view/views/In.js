@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 /* Libs */
 import { Switch, Route } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-up';
 
 /* Containers / Components */
 import PageNotFound from './PageNotFound';
@@ -26,6 +27,11 @@ class In extends Component {
         </Content>
         <Footer />
         <Messages />
+        <ScrollToTop showUnder={160}>
+          <span className="scrollToTop">
+            <i className={`fa fa-arrow-up`} />
+          </span>
+        </ScrollToTop>
       </div>
     );
   }
