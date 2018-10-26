@@ -79,10 +79,13 @@ class Menu extends Component {
 Menu.defaultProps = {
   invert: false,
   showUserInfo: true,
+  isOpen: false,
 };
 
 Menu.propTypes = {
   invert: PropTypes.bool,
+  showUserInfo: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 export default Menu;

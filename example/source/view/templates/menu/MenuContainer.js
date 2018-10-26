@@ -7,7 +7,10 @@ import { activateLink, activateSubLink } from './MenuActions';
 /* Components */
 import Menu from './Menu';
 
-const mapStateToProps = state => ({ menu: state.menu });
+const mapStateToProps = state => ({
+  menu: state.menu,
+  isOpen: state.burgerMenu.isOpen,
+});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
