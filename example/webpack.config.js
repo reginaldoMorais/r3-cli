@@ -101,7 +101,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 8081,
+    port: process.env.PORT,
     contentBase: './source/client',
     historyApiFallback: true,
   },
