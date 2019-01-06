@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.6 (January 6, 2019)
+
+* Custom Port. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 3.0.5 (October 26, 2018)
 
 * Bugfix menu is not close. ([@reginaldoMorais](https://github.com/reginaldoMorais))
