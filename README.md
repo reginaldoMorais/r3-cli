@@ -6,7 +6,7 @@
 
 # R3-CLI
 
-Create React applications with Redux and Router v4, very fast.
+Create React applications with server-side rendering using Redux and Router v4. Simple adn very fast!
 
 ## Installation
 
@@ -14,6 +14,14 @@ Run the command below, to have the module installed globally:
 
 ```bash
 npm install -g r3-cli
+```
+
+### For old structure
+
+For the old structure please use R3-CLI version 3 or before.
+
+```bash
+npm install -g r3-cli@^3.0.6
 ```
 
 ## Usage
@@ -140,20 +148,20 @@ r3-cli --route
 
 A new route and view will automatically be created. It will be created the files:
 
-/source/views/web/page/newView
+./source/views/web/page/newView
 
 ```note
 NewView.jsx
 NewViewContainer.jsx
 ```
 
-/source/actions
+./source/actions
 
 ```note
 NewViewActions.js
 ```
 
-/source/reducers
+./source/reducers
 
 ```note
 NewViewReducer.js
