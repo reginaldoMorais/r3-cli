@@ -47,6 +47,8 @@ my-app
 ├── README.md
 ├── node_modules
 └── source
+    ├── actions
+    │
     ├── assets
     │   ├── fonts
     │   ├── images
@@ -62,30 +64,34 @@ my-app
     │   ├── config.env.json
     │   └── response.status.json
     │
+    ├── reducers
+    │
     ├── server
     │   ├── excludesExtensions.js
     │   ├── index.js
     │   ├── server.js
     │   └── template.js
     │
-    ├── view
-    │   ├── templates
-    │   ├── views
-    │   │  ├── controller
-    │   │  ├── pages
-    │   │  │  └── index
-    │   │  │     ├── __test__
-    │   │  │     ├── Index.js
-    │   │  │     ├── IndexActions.js
-    │   │  │     └── IndexContainer.js
-    │   │  │
-    │   │  ├── In.js
-    │   │  ├── Out.js
-    │   │  └── PageNotFound.js
+    ├── views
+    │   ├── web
+    │   │   ├── components
+    │   │   ├── controller
+    │   │   ├── pages
+    │   │   │   └── index
+    │   │   │       ├── __test__
+    │   │   │       ├── Index.js
+    │   │   │       ├── IndexActions.js
+    │   │   │       └── IndexContainer.js
+    │   │   │
+    │   │   ├── templates
+    │   │   │   ├── In.js
+    │   │   │   ├── Out.js
+    │   │   │   └── PageNotFound.js
+    │   │   │
+    │   │   └── Imports.js
     │   │
-    │   └── Imports.js
+    │   └── mobile (future feature)
     │
-    ├── AppReducer.js
     ├── Reducers.js
     ├── Routes.js
     └── Store.js
@@ -132,27 +138,27 @@ To create a new route on your Project run the command bellow:
 r3-cli --route
 ```
 
-A new route and view will automatically be created.
+A new route and view will automatically be created. It will be created the files:
 
-## Creating a new View
-
-To create a new view on your Project run the command bellow:
-
-```bash
-r3-cli --view
-```
-
-A new view will automatically be created.
-It will be created the files:
+/source/views/web/page/newView
 
 ```note
 NewView.jsx
-NewViewAction.js
 NewViewContainer.jsx
-NewViewReducer.jsx
 ```
 
+/source/actions
 
+```note
+NewViewActions.js
+```
+
+/source/reducers
+
+```note
+NewViewReducer.js
+```
 
 ## So, enjoy the plugin and Thank you for use it!
+
 [Reginaldo Morais](mailto:reginaldo.cmorais@gmail.com)

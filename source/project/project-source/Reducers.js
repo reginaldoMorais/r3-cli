@@ -6,9 +6,9 @@ import { reducer as toastrReducer } from 'react-redux-toastr';
 import { reducer as burgerMenu } from 'redux-burger-menu';
 
 /* Reducers */
-import MenuReducer from './view/templates/menu/MenuReducer';
-import LoadingBarReducer from './view/templates/loadingBar/LoadingBarReducer';
-import AppReducer from './AppReducer';
+import MenuReducer from './reducers/MenuReducer';
+import LoadingBarReducer from './reducers/LoadingBarReducer';
+import AppReducer from './reducers/AppReducer';
 
 const rootReducer = combineReducers({
   menu: MenuReducer,

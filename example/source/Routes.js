@@ -4,7 +4,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 /* Containers / Components */
-import Controller from './view/views/controller/ControllerContainer';
+import Controller from './views/web/controller/ControllerContainer';
 
 export default props => {
   return (

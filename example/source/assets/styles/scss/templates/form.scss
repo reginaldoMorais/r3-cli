@@ -2,26 +2,28 @@
  * Common
  */
 
- .form-control-inline {
-  span, select.form-control {
+.form-control-inline {
+
+  span,
+  select.form-control {
     display: inline-block;
   }
 
   select.form-control {
     width: auto;
-    margin-left: 10px;
+    margin-left: 1rem;
   }
 }
 
 .float-btn {
-  margin-top: 18px;
+  margin-top: 1.8rem;
   position: absolute;
-  right: 15px;
-  top: 5px;
+  right: 1.5rem;
+  top: .5rem;
 }
 
 .formMessage {
-  padding: 5px;
+  padding: .5rem;
   display: inline-block;
 }
 

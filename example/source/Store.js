@@ -18,10 +18,13 @@ const createServerStore = initialState => {
 const createClientStore = (initialState, devTools) => {
   const persistConfig = { key: 'root', storage };
   const persistedReducer = persistReducer(persistConfig, reducers);
-  const middlewares = compose(applyMiddleware(multi, thunk, promise), devTools);
+  const middlewares = compose(
+    applyMiddleware(multi, thunk, promise),
+    devTools
+  );
 
-  let store = createStore(persistedReducer, initialState, middlewares);
-  let persistor = persistStore(store);
+  const store = createStore(persistedReducer, initialState, middlewares);
+  const persistor = persistStore(store);
   persistor.purge();
 
   return { store, persistor };

@@ -7,7 +7,7 @@ module.exports = {
         name: 'option',
         type: 'list',
         message: 'What do you want to do:',
-        choices: ['Create a new project', 'Create a Route', 'Create a View', 'Show available commands'],
+        choices: ['Create a new project', 'Create a Route', 'Show available commands'],
         default: 'Create new project',
       },
     ];
@@ -55,23 +55,6 @@ module.exports = {
         message: 'Tell me which route type do you want:',
         choices: ['external', 'internal'],
         default: 'external',
-      },
-    ];
-    return inquirer.prompt(questions);
-  },
-  askViewName: () => {
-    const questions = [
-      {
-        name: 'viewName',
-        type: 'input',
-        message: 'Enter the name of the View.\n The characters must be lowercase:',
-        validate: value => {
-          if (value.length) {
-            return true;
-          } else {
-            return 'Please enter a valid name.';
-          }
-        },
       },
     ];
     return inquirer.prompt(questions);

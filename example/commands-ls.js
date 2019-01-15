@@ -2,7 +2,7 @@ const colors = require('colors/safe');
 
 const commands =
   colors.cyan('========================') +
-  colors.cyan('\n  :: EXAMPLE ::\n') +
+  colors.cyan('\n  :: NEW-STRUCTURE ::\n') +
   colors.cyan('========================\n\n') +
   'Para executar um dos scripts basta digitar os comandos abaixo no console: \n' +
   '    npm run ' +

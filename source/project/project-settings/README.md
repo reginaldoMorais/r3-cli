@@ -1,4 +1,4 @@
-# {{APP_TITLE}}
+# NEW-STRUCTURE
 
 Descrição.
 

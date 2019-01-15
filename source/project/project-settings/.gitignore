@@ -1,8 +1,8 @@
-# dependencies
-/node_modules
-/dist
+# DIR
+node_modules/
+dist/
+coverage/
+zip/
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# FILE
+*.log

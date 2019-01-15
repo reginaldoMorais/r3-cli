@@ -67,8 +67,26 @@ module.exports = {
 
   copyViews: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/view`);
+      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/views`);
       console.info(chalk.green('  \u2713 Views folder created'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
+  copyReducers: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-reducers`, `${projectName}/source/reducers`);
+      console.info(chalk.green('  \u2713 Reducers folder created'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
+  copyActions: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-actions`, `${projectName}/source/actions`);
+      console.info(chalk.green('  \u2713 Actions folder created'));
     } catch (err) {
       console.error(err);
     }

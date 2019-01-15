@@ -7,14 +7,6 @@ import { Row, Col, Container } from 'reactstrap';
 /* Containers / Components */
 
 class ${component} extends Component {
-  componentDidMount() {
-    this.scrollToTop();
-  }
-
-  scrollToTop() {
-    window.scrollTo(0, 0);
-  }
-
   render() {
     return (
       <Container>

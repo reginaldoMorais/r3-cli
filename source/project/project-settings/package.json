@@ -7,9 +7,9 @@
     "ls": "node commands-ls.js",
     "analyse": "NODE_ENV=analyse webpack --config webpack.config.js -p",
     "start": "npm run start:dev",
-    "start:dev": "PORT=${PORT:=8081} NODE_ENV=development webpack-dev-server --progress --colors --inline --hot",
-    "start:stg": "PORT=${PORT:=8082} NODE_ENV=staging webpack-dev-server --colors --inline --hot",
-    "start:prod": "PORT=${PORT:=80} NODE_ENV=production webpack-dev-server --colors --inline --hot",
+    "start:dev": "NODE_ENV=development webpack-dev-server --progress --colors --inline --hot",
+    "start:stg": "NODE_ENV=staging webpack-dev-server --colors --inline --hot",
+    "start:prod": "NODE_ENV=production webpack-dev-server --colors --inline --hot",
     "build": "npm run build:prod",
     "build:stg": "npm run clean && NODE_ENV=staging webpack --config ./webpack.config.js --colors",
     "build:prod": "npm run clean && NODE_ENV=production webpack --config ./webpack.config.js --colors",
@@ -20,12 +20,13 @@
     "test:w": "jest --watchAll",
     "test:v": "jest --verbose",
     "test:c": "jest --coverage",
-    "test:d": "jest --debug"
+    "test:d": "jest --debug",
+    "lint": "eslint source/**/*.js"
   },
   "author": "reginaldoMorais <reginaldo.cmorais@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
@@ -70,6 +71,7 @@
     "sweetalert-react": "^0.4.11"
   },
   "devDependencies": {
+    "babel-core": "^7.0.0-0",
     "copy-webpack-plugin": "^4.5.3",
     "css-loader": "^1.0.0",
     "enzyme": "^3.7.0",
@@ -93,6 +95,7 @@
     "progress-bar-webpack-plugin": "^1.11.0",
     "querystring": "^0.2.0",
     "react-test-renderer": "^16.5.2",
+    "regenerator-runtime": "^0.13.1",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",

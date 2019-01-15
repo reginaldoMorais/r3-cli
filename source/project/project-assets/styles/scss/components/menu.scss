@@ -4,16 +4,16 @@
 
 .bm-burger-button {
   position: absolute;
-  width: 24px;
-  height: 18px;
-  left: 36px;
+  width: 2.4rem;
+  height: 1.8rem;
+  left: 3.6rem;
   right: initial;
-  top: 33px;
+  top: 3.3rem;
 }
 
 .menu-right .bm-burger-button {
   left: initial;
-  right: 36px;
+  right: 3.6rem;
 }
 
 .bm-burger-bars {
@@ -23,11 +23,12 @@
 .bm-menu-wrap {
   background: #333;
   color: #DDD;
-  padding: 20px;
-  box-shadow: 0px 0 10px 4px rgba(51, 51, 51, 0.4);
+  padding: 2rem;
+  box-shadow: 0 0 1rem .4rem rgba(51, 51, 51, .4);
 
   .bm-menu {
-    margin-top: 20px;
+    margin-top: 2rem;
+    font-size: 1.2rem;
 
     .bm-item-list {
       .menu-n1 {
@@ -37,14 +38,14 @@
         &.active {
           border: 1px solid #272727;
 
-          & > a {
+          &>a {
             border: 1px solid #464545;
           }
         }
 
         .menu-submenu {
           background: #5a5a5a;
-          box-shadow: inset 0 0 20px -6px #000;
+          box-shadow: inset 0 0 2rem -.6rem #000;
 
           .menu-n2 {
             display: flex;
@@ -54,9 +55,9 @@
 
       a {
         width: 100%;
-        color: #DDD;
-        font-size: 16px;
-        padding: 10px 20px ;
+        color: #ddd;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
 
         &:hover {
           background: #444;
@@ -64,8 +65,8 @@
           text-decoration: none;
         }
 
-        i + span {
-          margin-left: 20px;
+        i+span {
+          margin-left: 2rem;
         }
       }
     }

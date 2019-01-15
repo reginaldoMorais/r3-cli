@@ -30,6 +30,7 @@
     "feather": true
   },
   "rules": {
+    "indent": 2,
     "no-case-declarations": "warn",
     "require-jsdoc": "off",
     "no-console": "off",
@@ -43,7 +44,11 @@
     "react/jsx-no-duplicate-props": "error",
     "object-curly-spacing": ["error", "always"],
     "arrow-parens": ["error", "as-needed"],
-    "prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true, "printWidth": 120}],
+    "prettier/prettier": ["error", {
+      "trailingComma": "es5",
+      "singleQuote": true,
+      "printWidth": 120
+    }],
     "keyword-spacing": ["error", {
       "before": true,
       "after": true
