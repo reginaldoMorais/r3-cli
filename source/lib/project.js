@@ -28,7 +28,7 @@ module.exports = {
 
     files.forEach(file => {
       try {
-        let data = fs.readFileSync(file, 'utf-8');
+        const data = fs.readFileSync(file, 'utf-8');
         let result;
 
         if (file.indexOf('package.json') > 0) {

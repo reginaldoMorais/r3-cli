@@ -102,14 +102,14 @@ module.exports = {
   },
 
   setReducerImport: importStr => {
-    let data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
-    let result = data.replace(/\/\* Reducers \*\//g, importStr);
+    const data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
+    const result = data.replace(/\/\* Reducers \*\//g, importStr);
     fs.writeFileSync(`./source/Reducers.js`, result, 'utf-8');
   },
 
   setReducer: reducerStr => {
-    let data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
-    let result = data.replace(/const rootReducer = combineReducers\(\{/g, reducerStr);
+    const data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
+    const result = data.replace(/const rootReducer = combineReducers\(\{/g, reducerStr);
     fs.writeFileSync(`./source/Reducers.js`, result, 'utf-8');
   },
 

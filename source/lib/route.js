@@ -48,14 +48,14 @@ module.exports = {
   },
 
   setImport: (file, importStr) => {
-    let data = fs.readFileSync(file, 'utf-8');
-    let result = data.replace(/\/\* Containers \/ Components \*\//g, importStr);
+    const data = fs.readFileSync(file, 'utf-8');
+    const result = data.replace(/\/\* Containers \/ Components \*\//g, importStr);
     fs.writeFileSync(file, result, 'utf-8');
   },
 
   setRoute: (file, routeStr) => {
-    let data = fs.readFileSync(file, 'utf-8');
-    let result = data.replace(/<Switch>/g, routeStr);
+    const data = fs.readFileSync(file, 'utf-8');
+    const result = data.replace(/<Switch>/g, routeStr);
     fs.writeFileSync(file, result, 'utf-8');
   },
 
@@ -69,7 +69,7 @@ module.exports = {
       link = `/${name}`;
     }
 
-    let data = fs.readFileSync(file, 'utf-8');
+    const data = fs.readFileSync(file, 'utf-8');
     const content = `},\n    {
       id: '${name}',
       name: '${name.charAt(0).toUpperCase() + name.slice(1)}',
@@ -80,7 +80,7 @@ module.exports = {
       show: true,
     } /* r3-cli-menu-tag */,`;
 
-    let result = data.replace(/} \/\* r3-cli-menu-tag \*\/,/g, content);
+    const result = data.replace(/} \/\* r3-cli-menu-tag \*\/,/g, content);
     fs.writeFileSync(file, result, 'utf-8');
   },
 };

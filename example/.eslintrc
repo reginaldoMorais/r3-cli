@@ -30,7 +30,9 @@
     "feather": true
   },
   "rules": {
-    "indent": 2,
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
     "no-case-declarations": "warn",
     "require-jsdoc": "off",
     "no-console": "off",

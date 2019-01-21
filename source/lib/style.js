@@ -33,8 +33,11 @@ module.exports = {
   },
 
   setImport: importStr => {
-    let data = fs.readFileSync(`./source/views/web/Imports.js`, 'utf-8');
-    let result = data.replace(/\/\* Pages \*\//g, `/* Pages */\nimport '../../assets/styles/scss/pages/${importStr}';`);
+    const data = fs.readFileSync(`./source/views/web/Imports.js`, 'utf-8');
+    const result = data.replace(
+      /\/\* Pages \*\//g,
+      `/* Pages */\nimport '../../assets/styles/scss/pages/${importStr}';`
+    );
     fs.writeFileSync(`./source/views/web/Imports.js`, result, 'utf-8');
   },
 
