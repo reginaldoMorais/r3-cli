@@ -10,7 +10,6 @@ Todo:
     [APP] - [INNER-PROJECT] - [STYLE] - [VIEW] - [SERVER] - [WEBPACK] - [CLIENT]
 
   New:
-    ☐ [INNER-PROJECT] Review Eslint. @low
     ☐ [INNER-PROJECT] Implement i18n. @low
 
   Refactor:
@@ -30,5 +29,7 @@ Todo:
     ✔ [APP] Bufix when create internal routes. @critical @done(18-06-13 00:58)
     ✔ [APP] Bugfix when set Project name on index.ejs. @critical @done(18-06-13 01:40)
     ✔ [INNER-PROJECT] Implement copy-webpack-plugin for Assets. @high @done(18-06-13 02:14)
+    ✔ [INNER-PROJECT] Review Eslint. @low @done(19-01-27 16:24)
+    ✔ [INNER-PROJECT] New structure. @low @done(19-01-27 16:25)
 
   Archived:
