@@ -6,7 +6,7 @@
 
 # R3-CLI
 
-Create React applications with server-side rendering using Redux and Router v4. Simple adn very fast!
+Create React applications with server-side rendering using Redux and Router v4. Simple and very fast!
 
 ## Installation
 
