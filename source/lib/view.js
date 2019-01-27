@@ -18,7 +18,7 @@ module.exports = {
     status.start();
 
     try {
-      fs.mkdirSync(`./source/view/views/pages/${name}`);
+      fs.mkdirSync(`./source/views/web/pages/${name}`);
       module.exports.createComponent(name);
     } catch (err) {
       throw err;
@@ -32,7 +32,7 @@ module.exports = {
 
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/view/views/pages/${name}/${component}.js`;
+    const file = `./source/views/web/pages/${name}/${component}.js`;
     const content = componentFile(component);
 
     touch(file);
@@ -46,7 +46,7 @@ module.exports = {
   createContainer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/view/views/pages/${name}/${component}Container.js`;
+    const file = `./source/views/web/pages/${name}/${component}Container.js`;
     const content = containerFile(component);
 
     touch(file);
@@ -60,7 +60,7 @@ module.exports = {
   createAction: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/view/views/pages/${name}/${component}Actions.js`;
+    const file = `./source/actions/${component}Actions.js`;
     const content = actionFile(name);
 
     touch(file);
@@ -74,7 +74,7 @@ module.exports = {
   createReducer: name => {
     const component = name.charAt(0).toUpperCase() + name.slice(1);
 
-    const file = `./source/view/views/pages/${name}/${component}Reducer.js`;
+    const file = `./source/reducers/${component}Reducer.js`;
     const content = reducerFile(name);
 
     touch(file);
@@ -89,7 +89,7 @@ module.exports = {
     const reducer = name.charAt(0).toUpperCase() + name.slice(1) + 'Reducer';
 
     try {
-      const importStr = `/* Reducers */\nimport ${reducer} from './view/views/pages/${name}/${reducer}';`;
+      const importStr = `/* Reducers */\nimport ${reducer} from './reducers/${reducer}';`;
       const reducerStr = `const rootReducer = combineReducers({\n  ${name}: ${reducer},`;
 
       module.exports.setReducerImport(importStr);
@@ -102,19 +102,19 @@ module.exports = {
   },
 
   setReducerImport: importStr => {
-    let data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
-    let result = data.replace(/\/\* Reducers \*\//g, importStr);
+    const data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
+    const result = data.replace(/\/\* Reducers \*\//g, importStr);
     fs.writeFileSync(`./source/Reducers.js`, result, 'utf-8');
   },
 
   setReducer: reducerStr => {
-    let data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
-    let result = data.replace(/const rootReducer = combineReducers\(\{/g, reducerStr);
+    const data = fs.readFileSync(`./source/Reducers.js`, 'utf-8');
+    const result = data.replace(/const rootReducer = combineReducers\(\{/g, reducerStr);
     fs.writeFileSync(`./source/Reducers.js`, result, 'utf-8');
   },
 
   deleteView: name => {
-    fsx.removeSync(`./source/view/views/pages/${name}`);
+    fsx.removeSync(`./source/views/web/pages/${name}`);
     console.error(chalk.red(`\n  \u2715 View ${name.toUpperCase()} removed!`));
     process.exit();
   },

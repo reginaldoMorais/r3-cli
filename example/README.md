@@ -1,4 +1,4 @@
-# EXAMPLE
+# NEW-STRUCTURE
 
 Descrição.
 

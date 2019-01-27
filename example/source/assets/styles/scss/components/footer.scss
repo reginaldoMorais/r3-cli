@@ -7,11 +7,11 @@
   border-top: 1px solid #ccc;
   bottom: 0;
   left: 0;
-  padding: 20px 30px;
+  padding: 2rem 3rem;
   position: absolute;
   right: 0;
 
-  font-size: 12px;
+  font-size: 1.2rem;
   font-family: Arial;
 
   &.fixed {
@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     background: white;
     border-top: 1px solid #ccc;
   }

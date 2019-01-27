@@ -16,14 +16,14 @@ module.exports = {
       const component = name.charAt(0).toUpperCase() + name.slice(1);
       let file;
 
-      const importStr = `/* Containers / Components */\nimport ${component} from './pages/${name}/${container}';`;
+      const importStr = `/* Containers / Components */\nimport ${component} from '../pages/${name}/${container}';`;
       let routeStr;
 
       if (choise.option == 'internal') {
-        file = `./source/view/views/In.js`;
+        file = `./source/views/web/templates/In.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/in/${name}" component={${component}} />`;
       } else {
-        file = `./source/view/views/Out.js`;
+        file = `./source/views/web/templates/Out.js`;
         routeStr = `<Switch>\n            <Route exact key="${name}" path="/${name}" component={${component}} />`;
       }
 
@@ -48,19 +48,19 @@ module.exports = {
   },
 
   setImport: (file, importStr) => {
-    let data = fs.readFileSync(file, 'utf-8');
-    let result = data.replace(/\/\* Containers \/ Components \*\//g, importStr);
+    const data = fs.readFileSync(file, 'utf-8');
+    const result = data.replace(/\/\* Containers \/ Components \*\//g, importStr);
     fs.writeFileSync(file, result, 'utf-8');
   },
 
   setRoute: (file, routeStr) => {
-    let data = fs.readFileSync(file, 'utf-8');
-    let result = data.replace(/<Switch>/g, routeStr);
+    const data = fs.readFileSync(file, 'utf-8');
+    const result = data.replace(/<Switch>/g, routeStr);
     fs.writeFileSync(file, result, 'utf-8');
   },
 
   setMenu: (name, choise) => {
-    const file = `./source/view/templates/menu/MenuReducer.js`;
+    const file = `./source/reducers/MenuReducer.js`;
     let link;
 
     if (choise.option == 'internal') {
@@ -69,7 +69,7 @@ module.exports = {
       link = `/${name}`;
     }
 
-    let data = fs.readFileSync(file, 'utf-8');
+    const data = fs.readFileSync(file, 'utf-8');
     const content = `},\n    {
       id: '${name}',
       name: '${name.charAt(0).toUpperCase() + name.slice(1)}',
@@ -80,7 +80,7 @@ module.exports = {
       show: true,
     } /* r3-cli-menu-tag */,`;
 
-    let result = data.replace(/} \/\* r3-cli-menu-tag \*\/,/g, content);
+    const result = data.replace(/} \/\* r3-cli-menu-tag \*\/,/g, content);
     fs.writeFileSync(file, result, 'utf-8');
   },
 };

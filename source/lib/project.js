@@ -28,7 +28,7 @@ module.exports = {
 
     files.forEach(file => {
       try {
-        let data = fs.readFileSync(file, 'utf-8');
+        const data = fs.readFileSync(file, 'utf-8');
         let result;
 
         if (file.indexOf('package.json') > 0) {
@@ -67,8 +67,26 @@ module.exports = {
 
   copyViews: projectName => {
     try {
-      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/view`);
+      fsx.copySync(`${__dirname}/../project/project-views`, `${projectName}/source/views`);
       console.info(chalk.green('  \u2713 Views folder created'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
+  copyReducers: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-reducers`, `${projectName}/source/reducers`);
+      console.info(chalk.green('  \u2713 Reducers folder created'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
+  copyActions: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-actions`, `${projectName}/source/actions`);
+      console.info(chalk.green('  \u2713 Actions folder created'));
     } catch (err) {
       console.error(err);
     }

@@ -3,7 +3,7 @@ module.exports = component => {
 import { connect } from 'react-redux';
 
 /* Actions */
-import { action } from './${component}Actions';
+import { action } from '../../../../actions/${component}Actions';
 
 /* Components */
 import ${component} from './${component}';

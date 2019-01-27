@@ -3,7 +3,7 @@
  */
 
 .filter-wrapper {
-  & > div {
+  &>div {
     padding: 1rem 3rem;
   }
 
@@ -13,18 +13,18 @@
 
     span {
       display: inline-block;
-      margin: 5px;
+      margin: .5rem;
     }
 
     .close {
       display: inline-block;
-      margin: 2px 0 2px 5px;
+      margin: .2rem 0 .2rem .5rem;
       cursor: pointer;
       color: #FFF;
       font-size: 1.4rem;
 
       &:hover {
-        opacity: 0.5;
+        opacity: .5;
       }
     }
   }
@@ -39,10 +39,10 @@
     i {
       float: left;
       font-size: 1.5rem;
-      margin: 0.2rem 1rem .2rem 0;
+      margin: .2rem 1rem .2rem 0;
       position: absolute;
-      left: -5px;
-      top: 3px;
+      left: -.5rem;
+      top: .3rem;
     }
 
     span {
@@ -55,25 +55,25 @@
 .table-with-filter {
   .rt-tbody span {
     display: inline-block;
-    padding: 5px 10px;
+    padding: .5rem 1rem;
 
     &.filter-select {
       font-size: 1.2rem;
       cursor: pointer;
 
       &:hover {
-        box-shadow: 0 2px 7px -3px #000;
+        box-shadow: 0 .2rem .7rem -.3rem #000;
         background: #1c84c6;
         color: #FFF;
-        border-radius: 5px;
+        border-radius: .5rem;
 
         &:after {
           content: '\f0b0';
           font-family: FontAwesome;
           font-weight: normal;
           font-style: normal;
-          margin:0px 0px 0px 10px;
-          text-decoration:none;
+          margin: 0 0 0 1rem;
+          text-decoration: none;
         }
       }
     }

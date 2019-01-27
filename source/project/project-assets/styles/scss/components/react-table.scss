@@ -4,10 +4,10 @@
 
 .export {
   .btn {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.14), 0 3px 10px -13px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 .4rem 1rem 0 rgba(0, 0, 0, 0.14), 0 .3rem 1rem -1.3rem rgba(0, 0, 0, .2), 0 .1rem .5rem 0 rgba(0, 0, 0, .12);
     float: right;
 
-    i + span {
+    i+span {
       margin-left: 1rem;
       font-size: 1.2rem
     }
@@ -16,28 +16,28 @@
 
 .ReactTable {
   border: 0 none;
-  padding: 0 10px;
+  padding: 0 1rem;
 
   .rt-thead {
     &.-header {
       box-shadow: 0 0;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
     }
 
     .rt-th {
-      padding: 15px 10px;
+      padding: 1.5rem 1rem;
       font-weight: bold;
       border: 0 none;
     }
 
     .rt-td {
-      padding: 10px;
+      padding: 1rem;
     }
   }
 
   .rt-tbody {
     .rt-td {
-      padding: 10px;
+      padding: 1rem;
       border: 0 none;
     }
   }
@@ -48,10 +48,10 @@
 
   .rt-td-options {
     .btn {
-      font-size: 11px;
+      font-size: 1.1rem;
 
       &.btn:first-child {
-        margin-right: 5px;
+        margin-right: .5rem;
       }
     }
   }
@@ -70,7 +70,7 @@
     box-shadow: initial;
 
     width: 100%;
-    margin: 20px auto 0;
+    margin: 2rem auto 0;
     -webkit-box-pack: center;
 
     .-center {
@@ -78,13 +78,14 @@
     }
 
     .-pageInfo {
-      margin: 0 10px;
+      margin: 0 1rem;
     }
 
-    & .-previous, & .-next {
-      -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-      flex: 0.2;
+    & .-previous,
+    & .-next {
+      -webkit-box-flex: .2;
+      -ms-flex: .2;
+      flex: .2;
       text-align: center;
     }
   }

@@ -5,41 +5,41 @@
 .nav-breadcrumb {
   background: #fff;
   position: absolute;
-  top: 21px;
-  left: 230px;
+  top: 2.1rem;
+  left: 23rem;
   padding: 0;
-  margin: 0 0 50px;
+  margin: 0 0 5rem;
 
   @media (max-width: 768px) {
     position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 20px 20px 40px;
+    padding: 2rem 2rem 2rem 4rem;
   }
 
   h2 {
     font-family: "Roboto-Light";
-    font-size: 22px;
+    font-size: 2.2rem;
     margin: 0;
   }
 
   .breadcrumb {
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 0;
     margin-bottom: 0;
 
-    & > li {
+    &>li {
       display: inline-block;
 
       a {
-        font-size: 12px;
+        font-size: 1.2rem;
         color: #AAA;
       }
     }
 
-    & > li + li:before {
-      padding: 0 5px;
+    &>li+li:before {
+      padding: 0 .5rem;
       color: #ccc;
       content: "/\A0";
     }
