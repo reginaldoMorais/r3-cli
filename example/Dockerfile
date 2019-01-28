@@ -1,4 +1,4 @@
-FROM node:8.11-alpine
+FROM node:10.15-alpine
 
 #RUN yum install unzip -y
 
