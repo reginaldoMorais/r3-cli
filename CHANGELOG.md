@@ -6,6 +6,8 @@
 
 ## 4.0.0 (January 27, 2019)
 
+### Refactoring on base project. New implementation
+
 - New Structure for created projects. ([@reginaldoMorais](https://github.com/reginaldoMorais))
 
 ## 3.0.6 (January 6, 2019)
