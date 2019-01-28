@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1 (January 27, 2019)
+
+- Update Dockerfile image. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 4.0.0 (January 27, 2019)
 
 - New Structure for created projects. ([@reginaldoMorais](https://github.com/reginaldoMorais))
