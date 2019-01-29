@@ -56,6 +56,7 @@ my-app
 ├── node_modules
 └── source
     ├── actions
+    │   └── IndexActions.js
     │
     ├── assets
     │   ├── fonts
@@ -73,6 +74,7 @@ my-app
     │   └── response.status.json
     │
     ├── reducers
+    │   └── IndexReducer.js
     │
     ├── server
     │   ├── excludesExtensions.js
@@ -88,7 +90,6 @@ my-app
     │   │   │   └── index
     │   │   │       ├── __test__
     │   │   │       ├── Index.js
-    │   │   │       ├── IndexActions.js
     │   │   │       └── IndexContainer.js
     │   │   │
     │   │   ├── templates
