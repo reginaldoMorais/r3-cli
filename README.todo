@@ -11,6 +11,8 @@ Todo:
 
   New:
     ☐ [INNER-PROJECT] Implement i18n. @low
+    ☐ [INNER-PROJECT] Fix staging deploy. @critical
+    ☐ [INNER-PROJECT] Implement cross config. @critical
 
   Refactor:
 
