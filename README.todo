@@ -33,5 +33,6 @@ Todo:
     ✔ [INNER-PROJECT] Implement copy-webpack-plugin for Assets. @high @done(18-06-13 02:14)
     ✔ [INNER-PROJECT] Review Eslint. @low @done(19-01-27 16:24)
     ✔ [INNER-PROJECT] New structure. @low @done(19-01-27 16:25)
+    ✔ [INNER-PROJECT] Implement tag --open to dev script. @low @done(19-04-23 17:26)
 
   Archived:

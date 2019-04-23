@@ -7,7 +7,7 @@
     "ls": "node commands-ls.js",
     "analyse": "NODE_ENV=analyse webpack --config webpack.config.js -p",
     "start": "npm run start:dev",
-    "start:dev": "NODE_ENV=development webpack-dev-server --progress --colors --inline --hot",
+    "start:dev": "NODE_ENV=development webpack-dev-server --progress --colors --inline --hot --open",
     "start:stg": "NODE_ENV=staging webpack-dev-server --colors --inline --hot",
     "start:prod": "NODE_ENV=production webpack-dev-server --colors --inline --hot",
     "build": "npm run build:prod",
