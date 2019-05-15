@@ -5,18 +5,34 @@ Advices:
   To better enjoy this file of TODO's I advise you to use the editor VSCode of Microsoft with the plugin TODO+ (fabiospampinato.vscode-todo-plus) de Fabio Spampinato.
 
 Todo:
-
   Tags:
-    [APP] - [INNER-PROJECT] - [STYLE] - [VIEW] - [SERVER] - [WEBPACK] - [CLIENT]
+    [APP]
+    [INNER-PROJECT]
+    [STYLE]
+    [VIEW]
+    [CLIENT]
+    [SERVER]
+    [WEBPACK]
 
   New:
-    ☐ [INNER-PROJECT] Implement i18n. @low
-    ☐ [INNER-PROJECT] Fix staging deploy. @critical
-    ☐ [INNER-PROJECT] Implement cross config. @critical
+    ☐ [INNER-PROJECT] Implement i18n. @high
+    ☐ [INNER-PROJECT] Implement cross config. @high
+    ☐ [INNER-PROJECT] Implement emun of Actions. @high
+    ☐ [INNER-PROJECT] Implement relative path. @low
 
   Refactor:
+    ☐ [INNER-PROJECT] Refactor resource-status endpoint. @critical
+    ☐ [INNER-PROJECT] Refactor project to be more blank. @high
+    ☐ [INNER-PROJECT] Refactor redux-thunk to redux-saga. @high
+    ☐ [INNER-PROJECT] Refactor project Javascript to Typescript. @high
+    ☐ [INNER-PROJECT] Refactor config JSON to Yaml. @low
+    ☐ [SERVER] Refactor server. @high
+    ☐ [STYLE] Refactor project Sass to Styled Component. @high
+    ☐ [VIEW] Reactor containers and destructure mapStateToProps. @low
+    ☐ [APP] Refactor r3-cli to Gluegun. @high
 
   Fix:
+    ☐ [INNER-PROJECT] Fix staging deploy. @critical
 
   Done:
     ✔ [APP] Implement README.todo. @high @done(18-04-16 23:59)
