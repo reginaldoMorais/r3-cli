@@ -100,6 +100,7 @@ const createProject = async () => {
       await project.copyReducers(projectName);
       await project.copyActions(projectName);
       await project.copySettings(projectName);
+      await project.copyLang(projectName);
       await project.copyConfig(projectName);
       await project.copyServer(projectName);
       await project.copyAssets(projectName);

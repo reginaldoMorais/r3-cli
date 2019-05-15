@@ -9,13 +9,13 @@ import { reducer as burgerMenu } from 'redux-burger-menu';
 import IndexReducer from './reducers/IndexReducer';
 import MenuReducer from './reducers/MenuReducer';
 import LoadingBarReducer from './reducers/LoadingBarReducer';
-import AppReducer from './reducers/AppReducer';
+import SettingsReducer from './reducers/SettingsReducer';
 
 const rootReducer = combineReducers({
   index: IndexReducer,
   menu: MenuReducer,
   loadingBar: LoadingBarReducer,
-  app: AppReducer,
+  settings: SettingsReducer,
   form: formReducer,
   toastr: toastrReducer,
   burgerMenu,

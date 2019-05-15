@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+
+/* Libs */
 import { Switch, Redirect, Route } from 'react-router-dom';
 import getEnviromentConfig from '../../../config';
+import AppLocale from '../../../lang';
 
 /* Containers / Components */
+import { IntlProvider } from 'react-intl';
 import In from '../templates/In';
 import Out from '../templates/Out';
 
@@ -37,8 +41,15 @@ class Controller extends Component {
   }
 
   render() {
-    const pathname = this.props.location.pathname.split('/')[1];
-    return pathname == 'in' ? this.routeIn() : this.routeOut();
+    const { location, locale } = this.props;
+    const currentAppLocale = AppLocale[locale];
+    const pathname = location.pathname.split('/')[1];
+
+    return (
+      <IntlProvider locale={currentAppLocale.locale} messages={currentAppLocale.messages}>
+        {pathname == 'in' ? this.routeIn() : this.routeOut()}
+      </IntlProvider>
+    );
   }
 }
 

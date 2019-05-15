@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /* Libs */
+import IntlMessages from '../../components/IntlMessages';
 import { Link } from 'react-router-dom';
 import { slide as MenuSlide } from 'react-burger-menu';
 import { decorator as reduxBurgerMenu } from 'redux-burger-menu';
@@ -22,7 +23,9 @@ class Menu extends Component {
               <div className="menu-n2" key={`subitem-${i}`}>
                 <Link to={subitem.link} onClick={() => this.props.activateSubLink(item)} className="menu-item">
                   <i className={`fa ${subitem.icon}`} />
-                  <span className="nav-label">{subitem.name}</span>
+                  <span className="nav-label">
+                    <IntlMessages id={subitem.name} />
+                  </span>
                 </Link>
               </div>
             );
@@ -41,7 +44,9 @@ class Menu extends Component {
         <div className={`menu-n1 ${item.active ? 'active' : ''}`} key={`item-${i}`}>
           <Link to={item.link} onClick={() => this.props.activateLink(item)} className="menu-item">
             <i className={`fa ${item.icon}`} />
-            <span className="nav-label">{item.name}</span>
+            <span className="nav-label">
+              <IntlMessages id={item.name} />
+            </span>
           </Link>
           {this.renderSubMenu(item)}
         </div>

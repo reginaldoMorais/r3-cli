@@ -1,3 +1,33 @@
 /**
  * Index
  */
+
+.welcome-page {
+  .welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+    padding: 3rem 0;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1rem 4rem -3rem #a739ae;
+
+    h1 {
+      font-size: 6rem;
+      margin-left: 0;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: -1rem;
+    }
+
+    .welcome-desciption {
+      font-size: 2rem;
+      margin: 2rem auto 0;
+    }
+  }
+}

@@ -55,6 +55,7 @@
     "react-burger-menu": "^2.5.4",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.5.2",
+    "react-intl": "^2.8.0",
     "react-redux": "^5.0.7",
     "react-redux-toastr": "^7.4.0",
     "react-router-dom": "^4.3.1",

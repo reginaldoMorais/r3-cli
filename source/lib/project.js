@@ -101,6 +101,15 @@ module.exports = {
     }
   },
 
+  copyLang: projectName => {
+    try {
+      fsx.copySync(`${__dirname}/../project/project-lang`, `${projectName}/source/lang`);
+      console.info(chalk.green('  \u2713 Lang folder created'));
+    } catch (err) {
+      console.error(err);
+    }
+  },
+
   copyServer: projectName => {
     try {
       fsx.copySync(`${__dirname}/../project/project-server`, `${projectName}/source/server`);

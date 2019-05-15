@@ -19,9 +19,9 @@ module.exports = {
 
     app.get('/resource-status', (_, res) =>
       res.send({
-        createdBy: 'Node Version 6.10.3',
+        createdBy: 'Node Version 10.15.3',
         applicationName: '{{APP_TITLE}}',
-        implementationBuild: '20170905',
+        implementationBuild: '201905',
         implementationVersion: '1.1',
       })
     );
