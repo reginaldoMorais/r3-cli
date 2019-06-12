@@ -8,8 +8,9 @@ import { activateLink, activateSubLink } from '../../../../actions/MenuActions';
 import Menu from './Menu';
 
 const mapStateToProps = state => ({
+  auth: state.auth,
   menu: state.menu,
-  isOpen: state.burgerMenu.isOpen
+  isOpen: state.burgerMenu.isOpen,
 });
 const mapDispatchToProps = dispatch => bindActionCreators({ activateLink, activateSubLink }, dispatch);
 export default connect(
