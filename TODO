@@ -4,21 +4,21 @@ Project:
 Advices:
   To better enjoy this file of TODO's I advise you to use the editor VSCode of Microsoft with the plugin TODO+ (fabiospampinato.vscode-todo-plus) de Fabio Spampinato.
 
-Todo:
-  Tags:
-    [APP]
-    [INNER-PROJECT]
-    [STYLE]
-    [VIEW]
-    [CLIENT]
-    [SERVER]
-    [WEBPACK]
+Tags:
+  [APP]
+  [INNER-PROJECT]
+  [STYLE]
+  [VIEW]
+  [CLIENT]
+  [SERVER]
+  [WEBPACK]
 
+Todo:
   New:
-    ☐ [INNER-PROJECT] Implement i18n. @high
     ☐ [INNER-PROJECT] Implement cross config. @high
     ☐ [INNER-PROJECT] Implement emun of Actions. @high
     ☐ [INNER-PROJECT] Implement relative path. @low
+    ☐ [APP] Implement Git Hook for release. @high
 
   Refactor:
     ☐ [INNER-PROJECT] Refactor resource-status endpoint. @critical
@@ -50,5 +50,6 @@ Todo:
     ✔ [INNER-PROJECT] Review Eslint. @low @done(19-01-27 16:24)
     ✔ [INNER-PROJECT] New structure. @low @done(19-01-27 16:25)
     ✔ [INNER-PROJECT] Implement tag --open to dev script. @low @done(19-04-23 17:26)
+    ✔ [INNER-PROJECT] Implement i18n. @high @done(19-06-13 10:40)
 
   Archived:
