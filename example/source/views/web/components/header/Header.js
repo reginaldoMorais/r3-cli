@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <Navbar color="faded" light expand="sm" className="navbar-expand-sm">
         <NavbarBrand href="/">
-          <span>MY</span> | <span>LOGO</span>
+          <span>MY LOGO</span>
         </NavbarBrand>
       </Navbar>
     );

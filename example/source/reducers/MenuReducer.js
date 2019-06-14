@@ -2,7 +2,7 @@ const MENU_INITIAL_STATE = {
   items: [
     {
       id: 'index',
-      name: 'Index',
+      name: 'menu.item.index',
       link: '/',
       icon: 'fa-desktop',
       submenu: [],

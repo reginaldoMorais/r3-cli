@@ -21,13 +21,11 @@
 }
 
 .bm-menu-wrap {
-  background: #333;
-  color: #DDD;
-  padding: 2rem;
-  box-shadow: 0 0 1rem .4rem rgba(51, 51, 51, .4);
+  background: #efefef;
+  color: #333;
 
   .bm-menu {
-    margin-top: 2rem;
+    margin-top: 10rem;
     font-size: 1.2rem;
 
     .bm-item-list {
@@ -36,15 +34,11 @@
         flex-direction: column;
 
         &.active {
-          border: 1px solid #272727;
-
-          &>a {
-            border: 1px solid #464545;
-          }
+          background: #fc6b33;
         }
 
         .menu-submenu {
-          background: #5a5a5a;
+          background: #999;
           box-shadow: inset 0 0 2rem -.6rem #000;
 
           .menu-n2 {
@@ -55,12 +49,12 @@
 
       a {
         width: 100%;
-        color: #ddd;
+        color: #333;
         font-size: 1.2rem;
         padding: 1rem 2rem;
 
         &:hover {
-          background: #444;
+          background: #fd211d;
           font-weight: bold;
           text-decoration: none;
         }
@@ -74,7 +68,21 @@
 
   .bm-cross-button {
     .bm-cross {
-      background: #fff;
+      background: #333;
     }
+  }
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.bm-burger-bars {
+  background: #efefef;
+}
+
+.page.in {
+  .bm-burger-bars {
+    background: #373a47;
   }
 }

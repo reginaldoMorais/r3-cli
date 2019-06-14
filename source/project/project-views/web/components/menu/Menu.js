@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /* Libs */
-import { Link } from 'react-router-dom';
+import IntlMessages from '../../components/IntlMessages';
 import { slide as MenuSlide } from 'react-burger-menu';
 import { decorator as reduxBurgerMenu } from 'redux-burger-menu';
 
@@ -20,10 +20,12 @@ class Menu extends Component {
           {item.submenu.map((subitem, i) => {
             return (
               <div className="menu-n2" key={`subitem-${i}`}>
-                <Link to={subitem.link} onClick={() => this.props.activateSubLink(item)} className="menu-item">
+                <a href={subitem.link} onClick={() => this.props.activateSubLink(item)} className="menu-item">
                   <i className={`fa ${subitem.icon}`} />
-                  <span className="nav-label">{subitem.name}</span>
-                </Link>
+                  <span className="nav-label">
+                    <IntlMessages id={subitem.name} />
+                  </span>
+                </a>
               </div>
             );
           })}
@@ -39,10 +41,12 @@ class Menu extends Component {
     return items.map((item, i) => {
       return (
         <div className={`menu-n1 ${item.active ? 'active' : ''}`} key={`item-${i}`}>
-          <Link to={item.link} onClick={() => this.props.activateLink(item)} className="menu-item">
+          <a href={item.link} onClick={() => this.props.activateLink(item)} className="menu-item">
             <i className={`fa ${item.icon}`} />
-            <span className="nav-label">{item.name}</span>
-          </Link>
+            <span className="nav-label">
+              <IntlMessages id={item.name} />
+            </span>
+          </a>
           {this.renderSubMenu(item)}
         </div>
       );
@@ -50,6 +54,7 @@ class Menu extends Component {
   }
 
   render() {
+    const { auth } = this.props;
     return (
       <ReduxBurgerMenu
         isOpen={this.props.isOpen}
@@ -63,12 +68,12 @@ class Menu extends Component {
 
         {this.renderMenu()}
 
-        <If test={this.props.auth}>
+        <If test={auth.token != undefined && auth.token != ''}>
           <div className="menu-n1">
-            <Link to="/panel/auth" onClick={this.props.logout} className="menu-item">
+            <a href="/" onClick={this.props.logout} className="menu-item">
               <i className="fa fa-sign-out" />
               <span className="nav-label">Log out</span>
-            </Link>
+            </a>
           </div>
         </If>
       </ReduxBurgerMenu>
@@ -77,12 +82,20 @@ class Menu extends Component {
 }
 
 Menu.defaultProps = {
+  auth: {},
+  menu: {
+    items: [],
+  },
   invert: false,
   showUserInfo: true,
   isOpen: false,
 };
 
 Menu.propTypes = {
+  auth: PropTypes.object,
+  menu: PropTypes.shape({
+    items: PropTypes.array,
+  }),
   invert: PropTypes.bool,
   showUserInfo: PropTypes.bool,
   isOpen: PropTypes.bool,

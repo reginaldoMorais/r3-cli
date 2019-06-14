@@ -24,8 +24,10 @@ html {
     }
 
     #root {
+      font-size: 1.4rem;
       height: 100%;
-      background: #DDD;
+      background: rgb(166, 58, 180);
+      background: linear-gradient(17deg, rgba(166, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
     }
 
     .page-in {
@@ -34,6 +36,11 @@ html {
       @media (max-width: 768px) {
         margin-top: 0;
       }
+    }
+
+    .page.in {
+      background: #e8e8e8;
+      height: 100%;
     }
 
     .content {
