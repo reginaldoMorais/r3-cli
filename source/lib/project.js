@@ -17,9 +17,9 @@ module.exports = {
     const files = [
       `${process.cwd()}/${projectName}/source/client/index.html`,
       `${process.cwd()}/${projectName}/source/client/index.ejs`,
-      `${process.cwd()}/${projectName}/source/server/index.js`,
-      `${process.cwd()}/${projectName}/source/server/server.js`,
-      `${process.cwd()}/${projectName}/source/server/template.js`,
+      `${process.cwd()}/${projectName}/source/server/console.js`,
+      `${process.cwd()}/${projectName}/source/server/controllers/HealthController.js`,
+      `${process.cwd()}/${projectName}/source/server/templates/template.js`,
       `${process.cwd()}/${projectName}/package.json`,
       `${process.cwd()}/${projectName}/commands-ls.js`,
       `${process.cwd()}/${projectName}/README.md`,

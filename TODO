@@ -28,7 +28,7 @@ Todo:
     ☐ [INNER-PROJECT] Refactor config JSON to Yaml. @low
     ☐ [SERVER] Refactor server. @high
     ☐ [STYLE] Refactor project Sass to Styled Component. @high
-    ☐ [VIEW] Reactor containers and destructure mapStateToProps. @low
+    ☐ [VIEW] Refactor containers and destructure mapStateToProps. @low
     ☐ [APP] Refactor r3-cli to Gluegun. @high
 
   Fix:
