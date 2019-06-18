@@ -21,7 +21,6 @@ Todo:
     ☐ [APP] Implement Git Hook for release. @high
 
   Refactor:
-    ☐ [INNER-PROJECT] Refactor resource-status endpoint. @critical
     ☐ [INNER-PROJECT] Refactor project to be more blank. @high
     ☐ [INNER-PROJECT] Refactor redux-thunk to redux-saga. @high
     ☐ [INNER-PROJECT] Refactor project Javascript to Typescript. @high
@@ -51,5 +50,6 @@ Todo:
     ✔ [INNER-PROJECT] New structure. @low @done(19-01-27 16:25)
     ✔ [INNER-PROJECT] Implement tag --open to dev script. @low @done(19-04-23 17:26)
     ✔ [INNER-PROJECT] Implement i18n. @high @done(19-06-13 10:40)
+    ✔ [INNER-PROJECT] Refactor resource-status endpoint. @critical @done(19-06-17 19:00)
 
   Archived:
