@@ -1,5 +1,6 @@
 module.exports = component => {
   return `import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 /* Libs */
 import { Row, Col, Container } from 'reactstrap';

@@ -6,8 +6,9 @@ import { bindActionCreators } from 'redux';
 /* Components */
 import LoadingBar from './LoadingBar';
 
-const mapStateToProps = state => ({
-  loadingBar: state.loadingBar,
-});
+const mapStateToProps = ({ loadingBar }) => ({ loadingBar });
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
-export default connect(mapStateToProps, mapDispatchToProps)(LoadingBar);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoadingBar);

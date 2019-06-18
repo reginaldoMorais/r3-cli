@@ -5,5 +5,5 @@ import { connect } from 'react-redux';
 /* Components */
 import Content from './Content';
 
-const mapStateToProps = state => ({});
+const mapStateToProps = () => ({});
 export default connect(mapStateToProps)(Content);

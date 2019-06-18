@@ -7,7 +7,7 @@ import { action } from '../../../../actions/IndexActions';
 /* Components */
 import Index from './Index';
 
-const mapStateToProps = state => ({ common: state.common });
+const mapStateToProps = ({ common }) => ({ common });
 const mapDispatchToProps = dispatch => bindActionCreators({ action }, dispatch);
 export default connect(
   mapStateToProps,

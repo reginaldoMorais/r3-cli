@@ -6,10 +6,7 @@ import { bindActionCreators } from 'redux';
 /* Components */
 import Controller from './Controller';
 
-const mapStateToProps = state => ({
-  auth: state.auth,
-  locale: state.settings.locale,
-});
+const mapStateToProps = ({ auth, settings }) => ({ auth, locale: settings.locale });
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 export default connect(
   mapStateToProps,

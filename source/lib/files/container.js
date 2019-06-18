@@ -8,7 +8,7 @@ import { action } from '../../../../actions/${component}Actions';
 /* Components */
 import ${component} from './${component}';
 
-const mapStateToProps = state => ({});
+const mapStateToProps = () => ({});
 const mapDispatchToProps = dispatch => bindActionCreators({ action }, dispatch);
 export default connect(mapStateToProps, mapDispatchToProps)(${component});
 `;
