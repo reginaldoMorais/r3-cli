@@ -25,7 +25,6 @@ Todo:
     ☐ [INNER-PROJECT] Refactor redux-thunk to redux-saga. @high
     ☐ [INNER-PROJECT] Refactor project Javascript to Typescript. @high
     ☐ [INNER-PROJECT] Refactor config JSON to Yaml. @low
-    ☐ [SERVER] Refactor server. @high
     ☐ [STYLE] Refactor project Sass to Styled Component. @high
     ☐ [APP] Refactor r3-cli to Gluegun. @high
 
@@ -50,6 +49,7 @@ Todo:
     ✔ [INNER-PROJECT] Implement tag --open to dev script. @low @done(19-04-23 17:26)
     ✔ [INNER-PROJECT] Implement i18n. @high @done(19-06-13 10:40)
     ✔ [INNER-PROJECT] Refactor resource-status endpoint. @critical @done(19-06-17 19:00)
+    ✔ [SERVER] Refactor server. @high @done(19-06-17 19:00)
     ✔ [VIEW] Refactor containers and destructure mapStateToProps. @low @done(19-06-18 18:26)
 
   Archived:
