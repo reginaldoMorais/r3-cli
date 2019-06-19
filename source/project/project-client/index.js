@@ -8,16 +8,14 @@ import Routes from '../Routes';
 import configureStore from '../Store';
 
 const togglePluing = () => {
-  if (process.env.NODE_ENV === 'development') {
-    // const devTools = (window.devToolsExtension ? window.devToolsExtension() : f => f);
+  if (process.env.NODE_ENV !== 'production') {
     return window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
   } else {
     return f => f;
   }
 };
 
-const devTools = togglePluing();
-const { store, persistor } = configureStore(window.__INITIAL_STATE__, devTools);
+const { store, persistor } = configureStore(window.__INITIAL_STATE__, togglePluing());
 
 ReactDOM.render(
   <Provider store={store}>
