@@ -1,20 +1,25 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import serverConsole from './utils/console';
+import cors from './middleware/cors';
 import routes from './routes';
 
-module.exports = {
-  app: () => {
-    const app = express();
-    const router = express.Router();
+const server = express();
 
-    app.use(bodyParser.urlencoded({ extended: false }));
-    app.use(bodyParser.json());
-    app.use('/assets', express.static('./dist'));
-    app.use('/', router);
+// Configs
+const port = process.env.PORT || 80;
+const env = process.env.NODE_ENV || 'development';
 
-    // set routes
-    routes(app);
+// Middlewears
+server.use(cors);
+server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.json());
+server.use('/assets', express.static('./dist'));
 
-    return app;
-  },
-};
+// Routes
+routes(server);
+
+// Start Server
+server.listen(port, () => serverConsole(port, env));
+
+module.exports = server;

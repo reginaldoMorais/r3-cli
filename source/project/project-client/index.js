@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 
 import Routes from '../Routes';
-import configureStore from '../Store';
+import Store from '../Store';
 
 const togglePluing = () => {
   if (process.env.NODE_ENV !== 'production') {
@@ -15,7 +15,7 @@ const togglePluing = () => {
   }
 };
 
-const { store, persistor } = configureStore(window.__INITIAL_STATE__, togglePluing());
+const { store, persistor } = Store.createClientStore(window.__INITIAL_STATE__, togglePluing());
 
 ReactDOM.render(
   <Provider store={store}>

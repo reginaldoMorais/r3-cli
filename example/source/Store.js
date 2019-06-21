@@ -10,12 +10,12 @@ import thunk from 'redux-thunk';
 /* Reducers */
 import reducers from './Reducers';
 
-const createServerStore = initialState => {
+export const createServerStore = (initialState = {}) => {
   const middlewares = compose(applyMiddleware(multi, thunk, promise));
   return createStore(reducers, initialState, middlewares);
 };
 
-const createClientStore = (initialState, devTools) => {
+export const createClientStore = (initialState, devTools) => {
   const persistConfig = { key: 'root', storage };
   const persistedReducer = persistReducer(persistConfig, reducers);
   const middlewares = compose(
@@ -30,10 +30,4 @@ const createClientStore = (initialState, devTools) => {
   return { store, persistor };
 };
 
-export default (initialState = {}, devTools = f => f, isServer = false) => {
-  if (isServer) {
-    return createServerStore(initialState);
-  } else {
-    return createClientStore(initialState, devTools);
-  }
-};
+export default { createServerStore, createClientStore };
