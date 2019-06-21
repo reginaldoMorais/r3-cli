@@ -9,16 +9,17 @@ import '../../../node_modules/react-redux-toastr/lib/css/react-redux-toastr.min.
 /* Templates */
 import '../../assets/styles/scss/templates/fonts.scss';
 import '../../assets/styles/scss/templates/common.scss';
-import '../../assets/styles/scss/components/loadingBar.scss';
-import '../../assets/styles/scss/templates/box.scss';
-import '../../assets/styles/scss/templates/modal.scss';
-import '../../assets/styles/scss/templates/filter.scss';
 import '../../assets/styles/scss/templates/form.scss';
 import '../../assets/styles/scss/templates/button.scss';
-import '../../assets/styles/scss/templates/toastr.scss';
-import '../../assets/styles/scss/templates/sweet-alert.scss';
+import '../../assets/styles/scss/templates/in.scss';
+import '../../assets/styles/scss/templates/out.scss';
 
 /* Components */
+import '../../assets/styles/scss/components/loading.scss';
+import '../../assets/styles/scss/components/card.scss';
+import '../../assets/styles/scss/components/modal.scss';
+import '../../assets/styles/scss/components/toastr.scss';
+import '../../assets/styles/scss/components/sweet-alert.scss';
 import '../../assets//styles/scss/components/header.scss';
 import '../../assets/styles/scss/components/menu.scss';
 import '../../assets/styles/scss/components/breadcrumb.scss';

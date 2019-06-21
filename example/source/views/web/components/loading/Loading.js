@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 /* Containers / Components */
 import If from '../If';
 
-class LoadingBar extends Component {
+class Loading extends Component {
   render() {
     return (
       <div>
-        <If test={this.props.loadingBar}>
-          <div id="loadingbar" data-loadingbar="">
+        <If test={this.props.loading}>
+          <div id="loading" data-loading="">
             <div id="loading-bar-spinner" className="loading-bar-spinner">
               <div className="spinner-icon" />
               <div className="background" />
@@ -21,12 +21,12 @@ class LoadingBar extends Component {
   }
 }
 
-LoadingBar.defaultProps = {
-  loadingBar: false,
+Loading.defaultProps = {
+  isLoading: false,
 };
 
-LoadingBar.propTypes = {
-  loadingBar: PropTypes.bool,
+Loading.propTypes = {
+  isLoading: PropTypes.bool,
 };
 
-export default LoadingBar;
+export default Loading;

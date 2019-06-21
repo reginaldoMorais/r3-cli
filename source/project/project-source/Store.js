@@ -1,14 +1,10 @@
-import {
-  createStore,
-  applyMiddleware,
-  compose,
-} from '../../../examplessss/node_modules/redux-persist/src/node_modules/redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 /* Middlewares */
-import promise from '../../../examplessss/source/node_modules/redux-promise';
-import multi from '../../../examplessss/source/node_modules/redux-multi';
+import promise from 'redux-promise';
+import multi from 'redux-multi';
 import thunk from 'redux-thunk';
 
 /* Reducers */

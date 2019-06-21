@@ -4,11 +4,11 @@ import { bindActionCreators } from 'redux';
 /* Actions */
 
 /* Components */
-import LoadingBar from './LoadingBar';
+import Loading from './Loading';
 
-const mapStateToProps = ({ loadingBar }) => ({ loadingBar });
+const mapStateToProps = ({ loading }) => ({ loading });
 const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(LoadingBar);
+)(Loading);

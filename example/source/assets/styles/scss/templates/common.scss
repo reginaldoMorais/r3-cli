@@ -30,19 +30,6 @@ html {
       background: linear-gradient(17deg, #3ab48d 0%, #00fdf7 100%);
     }
 
-    .page-in {
-      margin-top: 5rem;
-
-      @media (max-width: 768px) {
-        margin-top: 0;
-      }
-    }
-
-    .page.in {
-      background: #e8e8e8;
-      height: 100%;
-    }
-
     .content {
       padding-top: 2rem;
     }
@@ -58,16 +45,6 @@ html {
         &+.btn {
           margin-left: .5rem;
         }
-      }
-    }
-
-    .menu-right {
-      h1 {
-        margin-left: 0;
-      }
-
-      .navbar-brand {
-        margin-left: 0;
       }
     }
 

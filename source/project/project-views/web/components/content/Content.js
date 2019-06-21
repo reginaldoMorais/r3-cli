@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Container } from 'reactstrap';
 
 /* Containers / Components */
-import LoadingBar from '../loadingBar/LoadingBarContainer';
+import Loading from '../loading/LoadingContainer';
 
 class Content extends Component {
   render() {
@@ -15,7 +15,7 @@ class Content extends Component {
         className={this.props.className == '' ? `content` : `content ${this.props.className}`}
       >
         {this.props.children}
-        <LoadingBar />
+        <Loading />
       </Container>
     );
   }

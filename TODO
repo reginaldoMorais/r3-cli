@@ -24,7 +24,6 @@ Todo:
     ☐ [INNER-PROJECT] Refactor project to be more blank. @high
     ☐ [INNER-PROJECT] Refactor redux-thunk to redux-saga. @high
     ☐ [INNER-PROJECT] Refactor project Javascript to Typescript. @high
-    ☐ [INNER-PROJECT] Refactor config JSON to Yaml. @low
     ☐ [STYLE] Refactor project Sass to Styled Component. @high
     ☐ [APP] Refactor r3-cli to Gluegun. @high
 
@@ -53,3 +52,4 @@ Todo:
     ✔ [VIEW] Refactor containers and destructure mapStateToProps. @low @done(19-06-18 18:26)
 
   Archived:
+    ✘ [INNER-PROJECT] Refactor config JSON to Yaml. @low @cancelled(19-06-21 12:46)
