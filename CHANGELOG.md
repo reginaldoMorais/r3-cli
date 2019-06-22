@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.1.1 (June 22, 2019)
+
+- Bugfix scripts. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 4.1.0 (June 22, 2019)
 
 - Implement i18n. ([@reginaldoMorais](https://github.com/reginaldoMorais))
