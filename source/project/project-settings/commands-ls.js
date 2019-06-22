@@ -16,35 +16,14 @@ const commands =
   colors.green('analyse') +
   '               -> Executa commando Webpack que analiza bundles da aplicação.\n\n' +
   '▶️ ' +
-  colors.green('start') +
-  '                 -> Atalho para rodar aplicação local em modo Desenvolvimento.\n' +
-  '▶️ ' +
-  colors.green('start:dev') +
-  '             -> Roda aplicação local em modo Desenvolvimento.\n' +
-  '▶️ ' +
-  colors.green('start:stg') +
-  '             -> Roda aplicação local em modo Staging.\n' +
-  '▶️ ' +
-  colors.green('start:prod') +
-  '            -> Roda aplicação local em modo Produção. [CUIDADO AO EXECUTAR NESTA CONGIGURAÇÃO]\n\n' +
+  colors.green('dev') +
+  '                   -> Roda aplicação local em modo Desenvolvimento.\n' +
   '▶️ ' +
   colors.green('build') +
-  '                 -> Atalho para rodar o build da aplicação em modo Produção.\n' +
+  '                 -> Rodar o build da aplicação, como default em modo Produção.\n' +
   '▶️ ' +
-  colors.green('build:stg') +
-  '             -> Roda o build da aplicação em modo Staging.\n' +
-  '▶️ ' +
-  colors.green('build:prod') +
-  '            -> Roda o build da aplicação em modo Produção.\n\n' +
-  '▶️ ' +
-  colors.green('serve') +
-  '                 -> Atalho para rodar a aplicação em modo Produção.\n' +
-  '▶️ ' +
-  colors.green('serve:stg') +
-  '             -> Roda aplicação em modo Staging.\n' +
-  '▶️ ' +
-  colors.green('serve:prod') +
-  '            -> Roda aplicação em modo Produção.\n\n' +
+  colors.green('start') +
+  '                 -> Rodar a aplicação server, como default em modo Produção.\n' +
   '▶️ ' +
   colors.green('clean') +
   '                 -> Exclui a pasta de build do projeto.\n\n' +
