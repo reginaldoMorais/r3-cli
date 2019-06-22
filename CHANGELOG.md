@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.1.0 (June 22, 2019)
+
+- Implement i18n. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+- Refactor resource-status endpoint. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+- Refactor server side redering. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 4.0.1 (January 27, 2019)
 
 - Update Dockerfile image. ([@reginaldoMorais](https://github.com/reginaldoMorais))
