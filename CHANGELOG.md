@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.1.2 (August 14, 2019)
+
+- Updates dependencies with vulnerability. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 4.1.1 (June 22, 2019)
 
 - Bugfix scripts. ([@reginaldoMorais](https://github.com/reginaldoMorais))
