@@ -1,11 +1,9 @@
-import appLocaleData from 'react-intl/locale-data/br';
 import esMessages from '../locales/pt_BR';
 
 const BrLang = {
   messages: {
-    ...esMessages,
+    ...esMessages
   },
-  locale: 'pt-BR',
-  data: appLocaleData,
+  locale: 'pt-BR'
 };
 export default BrLang;
