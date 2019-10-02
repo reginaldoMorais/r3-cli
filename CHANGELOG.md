@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.2.0 (October 1, 2019)
+
+- Updates project dependencies with vulnerability. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+- Updates React Intl (i18n) dependencies. ([@reginaldoMorais](https://github.com/reginaldoMorais))
+
 ## 4.1.3 (August 14, 2019)
 
 - Updates project dependencies with vulnerability. ([@reginaldoMorais](https://github.com/reginaldoMorais))
