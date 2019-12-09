@@ -24,6 +24,10 @@ For the old structure please use R3-CLI version 3 or before.
 npm install -g r3-cli@^3.0.6
 ```
 
+### Typescript version
+
+For using Typescript version please access: [R3-TS-CLI](https://github.com/reginaldoMorais/r3-ts-cli.git)
+
 ## Usage
 
 To see commands avaliable, run a single command with argument:
